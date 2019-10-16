@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SirRuanMatos/ProjetoFinal/issues"
   },
-  "homepage": "https://github.com/SirRuanMatos/ProjetoFinal#readme"
+  "homepage": "https://github.com/SirRuanMatos/ProjetoFinal#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
