@@ -11,3 +11,17 @@ git remote add origin https://github.com/SirRuanMatos/ProjetoFinal.git
 git push -u origin master
 
 
+
+
+
+
+/////////////////////////////////////////////////////
+envio e puxar
+
+git pull origin master -----------> puxa do git o repositorio
+
+
+git add (.Para todos) ou (Nome do arquivo.extençao)
+git commit -m "MENSAGEM"
+git push origin master ---------------> envia para o repositorio
+
