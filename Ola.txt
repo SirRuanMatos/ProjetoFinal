@@ -8,11 +8,6 @@ batata doce eh bom!
 
 eh bom! Teste 3
 
-Junior, teste 2!
+teste 10
 
-<<<<<<< HEAD
-Junior, teste 2!
 
-teste 3!
-=======
->>>>>>> d885c6badadb4a38e7d9f385aa056a0258fbee49
