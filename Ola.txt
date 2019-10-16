@@ -5,4 +5,8 @@ Testando commits
 o meu commit
 
 
+<<<<<<< HEAD
 batata doce eh bom!
+=======
+eh bom!çççç
+>>>>>>> b0308484dd9c389a78fe604eb4aa6a593c666aaf
