@@ -2,7 +2,7 @@
 /* BASIC */
 
 html {
-    background-color: #56baed;
+  background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
   }
   
   body {
@@ -80,7 +80,7 @@ html {
   
   
   /* FORM TYPOGRAPHY*/
-  
+  /*botao logi in*/
   input[type=button], input[type=submit], input[type=reset]  {
     background-color: #56baed;
     border: none;
@@ -95,7 +95,7 @@ html {
     box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    margin: 5px 20px 40px 20px;
+    margin: 15px 20px 40px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -114,17 +114,17 @@ html {
     -ms-transform: scale(0.95);
     transform: scale(0.95);
   }
-  
+  /*botao login*/
   input[type=text] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
-    padding: 15px 32px;
+    padding: 15px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5px;
+    margin-top: 20px;
     width: 85%;
     border: 2px solid #f6f6f6;
     -webkit-transition: all 0.5s ease-in-out;
