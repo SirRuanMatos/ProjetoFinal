@@ -9,16 +9,7 @@
     border-radius: 0px 0px 5px 5px;
     position: fixed;
 
-    
-    
-}/*
-.logotxt{
-    margin-left: 11%;
-    margin-top: 3%;
-    font-family: x;
-    src: url();
-
-}*/
+}
 .logoImg{
 
     position: absolute;
@@ -34,10 +25,8 @@
     display: table-cell;
     font-size: 15pt;
 
-
-
 }
-/*
+
 
 .telaUsuario{
 
@@ -53,4 +42,5 @@
     text-align: center;
     vertical-align: middle;
     display: table-cell;
-*/
+    
+
