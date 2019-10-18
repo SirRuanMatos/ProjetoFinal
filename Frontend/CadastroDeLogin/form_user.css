@@ -5,7 +5,7 @@ body {
   }
 
 .form {
-<<<<<<< HEAD
+
     margin-top: 5%;
 }
 
@@ -75,4 +75,9 @@ body {
     min-height: 100%;
     
   }
-
+  #icon {
+    margin-top: 5%;
+    margin-left: 15%; 
+    width:60%;
+    
+  }
