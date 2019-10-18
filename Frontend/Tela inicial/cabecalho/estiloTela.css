@@ -1,23 +1,28 @@
 .logoFundo{
     background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
     width: 100%;
-    height: 100px;
+    height: 110px;
     color: white;
     text-align: left;
     font: normal 25pt arial;
     border-radius: 0px 0px 10px 10px;
     position: fixed;
     
-}
+}/*
 .logotxt{
-    margin-left: 9%;
+    margin-left: 11%;
+    margin-top: 3%;
+    font-family: x;
+    src: url();
 
-}
+}*/
 .logoImg{
 
     position: absolute;
-    left: 1%;
-    top: 1px;
+    left: 10px;
+    top: 0px;
+    
+   
 }
 .link{
     text-decoration: none;
@@ -30,23 +35,9 @@
 
 
 }
+/*
+
 .telaUsuario{
-
-  
-    position: absolute;
-    left: 80%;
-    top: 0px;
-    border-radius:100%;
-    border:10px solid white;
-    width:100px;
-    height:100px;
-    background-color:rgb(44, 95, 143);
-    
-    
-}
-
-
-telaUsuario{
 
     position: absolute;
     left: 80%;
@@ -60,3 +51,4 @@ telaUsuario{
     text-align: center;
     vertical-align: middle;
     display: table-cell;
+*/

@@ -1,0 +1,78 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/*
+
+.barra-navegacao{
+    width: 22.5%;
+    float: left;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(12,12,12,0.9);
+    z-index: 10;
+  }
+  
+  .barra-navegacao .logo {
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    line-height: 100px;
+    background-color: #45489a;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .barra-navegacao .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid rgba(250,250,250,0.5);
+  }
+  
+  .barra-navegacao .logo em {
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  .barra-navegacao nav {
+    position: relative;
+    top: 60%;
+    left: 60%;
+    -webkit-transform: translateX(-60%) translateY(-60%);
+    -moz-transform: translateX(-60%) translateY(-60%);
+    -ms-transform: translateX(-60%) translateY(-60%);
+    -o-transform: translateX(-60%) translateY(-60%);
+    transform: translateX(-60%) translateY(-60%);
+  }
+  
+  .barra-navegacao ul {
+    margin-left: 45px;
+    list-style: none;
+    padding: 0;
+  }
+  .barra-navegacao li{
+    padding: 10px 0;
+  }
+  .barra-navegacao span{
+    display: inline-block;
+    position:relative;
+  }
+  .barra-navegacao nav a{
+    display: inline-block;
+    color: #fff;
+    margin-top: 5px;
+    text-decoration: none!important;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+  }
