@@ -10,11 +10,9 @@ class Login extends Component {
 
     envia(event) {
         event.preventDefault();
+        
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
         var texto = document.querySelector('#login').value;
-        //re.test(texto)
 
         if (re.test(texto)) {
             const requestInfo = {

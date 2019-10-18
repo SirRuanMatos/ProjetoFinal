@@ -7,6 +7,9 @@ function enviar() {
     let tipo = document.querySelector('#tipo').value
     let adm = document.querySelector('#adm')
 
+    console.log(tipo);
+    
+
     if (adm.checked) {
         console.log('Solicitou para ser infernizado o tempo todo');
     } else console.log('Não quer se incomodar');
