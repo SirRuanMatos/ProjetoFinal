@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Out-2019 às 22:27
+-- Tempo de geração: 18-Out-2019 às 19:25
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.1.31
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `compasso_tec`
 --
-CREATE DATABASE IF NOT EXISTS `compasso_tec` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `compasso_tec`;
 
 -- --------------------------------------------------------
 
@@ -41,6 +39,20 @@ CREATE TABLE `aluno` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `aula`
+--
+
+CREATE TABLE `aula` (
+  `idAula` int(11) NOT NULL,
+  `codTurma` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `hora` varchar(5) NOT NULL,
+  `local` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `curso`
 --
 
@@ -50,7 +62,9 @@ CREATE TABLE `curso` (
   `codProfessor` int(11) NOT NULL,
   `codTecnologia` int(11) NOT NULL,
   `descricao` text NOT NULL,
-  `preRequisito` text NOT NULL
+  `preRequisito` text NOT NULL,
+  `maxAlunos` int(11) NOT NULL,
+  `minAlunos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -75,7 +89,8 @@ CREATE TABLE `demanda` (
 CREATE TABLE `login` (
   `idLogin` int(11) NOT NULL,
   `login` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `senha` varchar(255) NOT NULL,
+  `adiministrador` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -138,7 +153,8 @@ CREATE TABLE `tecnologia` (
 
 CREATE TABLE `turma` (
   `idTurma` int(11) NOT NULL,
-  `codCurso` int(11) NOT NULL
+  `codCurso` int(11) NOT NULL,
+  `statusTurma` varchar(30) NOT NULL DEFAULT 'pendente'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -151,6 +167,13 @@ CREATE TABLE `turma` (
 ALTER TABLE `aluno`
   ADD PRIMARY KEY (`idAluno`),
   ADD KEY `LoginFK` (`codLogin`);
+
+--
+-- Índices para tabela `aula`
+--
+ALTER TABLE `aula`
+  ADD PRIMARY KEY (`idAula`),
+  ADD KEY `TurmaFKAula` (`codTurma`);
 
 --
 -- Índices para tabela `curso`
@@ -219,6 +242,12 @@ ALTER TABLE `aluno`
   MODIFY `idAluno` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de tabela `aula`
+--
+ALTER TABLE `aula`
+  MODIFY `idAula` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `curso`
 --
 ALTER TABLE `curso`
@@ -275,6 +304,12 @@ ALTER TABLE `turma`
 --
 ALTER TABLE `aluno`
   ADD CONSTRAINT `LoginFK` FOREIGN KEY (`codLogin`) REFERENCES `login` (`idLogin`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Limitadores para a tabela `aula`
+--
+ALTER TABLE `aula`
+  ADD CONSTRAINT `TurmaFKAula` FOREIGN KEY (`codTurma`) REFERENCES `turma` (`idTurma`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `curso`
