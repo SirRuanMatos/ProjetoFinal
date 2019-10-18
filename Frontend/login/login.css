@@ -27,7 +27,7 @@ html {
     color: #cccccc;
   }
   
-  
+
   
   /* STRUCTURE */
   
@@ -38,7 +38,7 @@ html {
     justify-content: center;
     width: 100%;
     min-height: 100%;
-    padding: 20px;
+    
   }
   
   #formContent {
@@ -227,12 +227,14 @@ html {
   }
   
   .fadeIn.first {
+    margin-top: 15px;
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     animation-delay: 0.4s;
   }
   
   .fadeIn.second {
+    
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
     animation-delay: 0.6s;
