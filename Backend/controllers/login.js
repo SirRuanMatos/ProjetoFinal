@@ -23,6 +23,8 @@ module.exports = function (app) {
 
     });
 
+
+    // PARA INSERT copia, altera nome da função, a rota e altera o texto no else
     app.post('/login/cadastro', (req, res) => {
         var connection = app.persistencia.conexaoBanco();
         var loginDao = new app.persistencia.LoginDao(connection);
@@ -34,7 +36,7 @@ module.exports = function (app) {
                 return;
             }
             else {
-                res.status(200).send("Usu?rio criado");
+                res.status(200).send("Usuário criado");
             }
 
         });

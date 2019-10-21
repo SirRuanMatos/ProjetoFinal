@@ -10,7 +10,7 @@ class CadastroLogin extends Component {
     envia(event) {
         event.preventDefault();
 
-
+        // coloca os campos pegos do html
         const requestInfo = {
             method: 'POST',
             body: JSON.stringify({
@@ -27,7 +27,7 @@ class CadastroLogin extends Component {
 
         console.log(requestInfo);
 
-
+        // altera rota
         fetch('http://localhost:8080/login/cadastro', requestInfo)
             .then(response => {
                 if (response.ok) {
@@ -39,6 +39,7 @@ class CadastroLogin extends Component {
             .then(text => {
                 //localStorage.setItem('auth-token', token);
                 // browserHistory.push('/timeline');
+                // zera os campos pego do html
                 this.setState({ msg: text });
                 this.email.value = '';
                 this.senha.value = '';
@@ -50,16 +51,11 @@ class CadastroLogin extends Component {
                 this.setState({ msg: error.message });
             });
 
-        /* else {
-            this.setState({ msg: "Digite um email válido" });
-            //throw new Error("Digite um email válido");
-        } */
-
 
     }
 
 
-
+    // adiciona ref={(input)} => this.'NOME DO CAMPO' = input
     render() {
         return (
             <div className="wrapper">
