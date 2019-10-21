@@ -1,3 +1,83 @@
+body {
+    background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
+    font-family: "Poppins", sans-serif;
+    height: 100vh;  
+  }
+.progress{
+    margin: 40px 30px 40px 30px;
+
+}
+.titulo{
+    text-align: center;
+}
+
+  .formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    /*position: relative;*/
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);  
+    
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    
+    
+  }
+  #icon {
+    margin-top: 5%;
+    margin-left: 15%; 
+    width:60%;
+    
+  }
+
+
 progress[value] {
     /*removver a aparência padrão */
     -webkit-appearance: none;
@@ -8,10 +88,10 @@ progress[value] {
     border: none;
  
     /* adicionar próprios estilos */
-    width: 270px;
+    width: 500px;
     height: 30px;
     overflow:hidden;
-     
+    
 /*  Esses estilos serão aplicados apenas ao fundo da barra no mozilla */
     border:1px inset #666;
     background-color:#D8D8D8;
