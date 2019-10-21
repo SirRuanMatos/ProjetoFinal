@@ -368,7 +368,8 @@ header {
   width: 100%;
   height: 140px;
   line-height: 100px;
- background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
+ background-image: linear-gradient(to right, #032452,#04285a, #04357a, #0d428b,#0d489b,#1251aa);
+    width: 100%;
   padding: 20px;
   text-align: center;
 }
@@ -1267,7 +1268,8 @@ header {
     width: 430%;
     height: 140px;
     line-height: 100px;
-    background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
+    background-image: linear-gradient(to right, #032452,#04285a, #04357a, #0d428b,#0d489b,#1251aa);
+    width: 100%;
     padding: 20px;
     text-align: center;
   }
@@ -1279,10 +1281,8 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    height: 100px;
-    width: 100%;
-    display: inline-block;
-    border: 1px solid rgba(250,250,250,0.5);
+    
+  
   }
   
   .barra-navegacao .logo em {
