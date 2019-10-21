@@ -12,9 +12,6 @@ var porcentagem1 = 85
     // pega o total de alunos cadastrados em todos os 6 cursos
         // EM BREVE
 
-        var total = 400 //?
-
-    let porcentagem = total / 100;
 
 
 
