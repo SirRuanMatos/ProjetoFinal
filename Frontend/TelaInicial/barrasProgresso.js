@@ -1,6 +1,36 @@
+var porcentagem1 = 85   
+
+
+// LOGICA DO BANCO
+    // pega os top 6 cursos cadastratos no banco
+        // EM BREVE
+
+    // pega a quantidade de alunos na turma de cada um dos 6 cursos 
+        // EM BREVE
+        // (acredito que vai ser um for dentro de outro)
+
+    // pega o total de alunos cadastrados em todos os 6 cursos
+        // EM BREVE
+
+        var total = 400 //?
+
+    let porcentagem = total / 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.onload = function() { 
 		
-    animateprogress("#html5",91);
+    animateprogress("#html5",this.porcentagem1);
     animateprogress("#php",72);
     animateprogress("#css",86);
     animateprogress("#python",52);
@@ -8,15 +38,7 @@ window.onload = function() {
     animateprogress("#nodejs",36);
     
 } 	
-document.querySelector ("#boton").addEventListener ("click", function() { 
-    animateprogress("#html5",91);
-    animateprogress("#php",72);
-    animateprogress("#css",86);
-    animateprogress("#python",52);
-    animateprogress("#javascript",79);
-    animateprogress("#nodejs",36);
 
-});
 function animateprogress (id, val){    
  
  
