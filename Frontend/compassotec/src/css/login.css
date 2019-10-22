@@ -112,7 +112,7 @@ body {
     transform: scale(0.95);
   }
   /*botao login*/
-  input[type=text] {
+  input[type=text],input[type=date] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;

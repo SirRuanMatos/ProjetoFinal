@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
+import GrupoForm from './GrupoForm';
 
 class Teste extends Component {
-    state = {}
+    constructor(props) {
+        super(props);
+        this.state = { aulas: [], id: 0 };
+        this.handleAdcionarAulas = this.handleAdcionarAulas.bind(this);
 
-    componentDidMount() {
-        const requestInfo = {
-            method: 'POST',
-            body: JSON.stringify({}),
-            headers: new Headers({
-                'Content-type': 'application/json',
-                'x-access-token': localStorage.getItem('auth-token')
-            })
-        };
+    }
 
-        fetch('http://localhost:8080/teste', requestInfo)
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                } else {
+    handleAdcionarAulas() {
 
-                    throw new Error('Não foi possí­vel fazer o login');
-                }
-            })
-            .catch(error => {
-                this.setState({ msg: error.message });
-            });
+        var aulas = this.state.aulas;
+        aulas.push({ aId: this.state.id + 1 });
+
+        this.setState({
+            aulas: aulas,
+            id: this.state.id + 1
+        });
     }
 
     render() {
-        return (<h1>Entro</h1>);
+        const aulas = this.state.aulas.map(a => <GrupoForm id={a} />)
+
+        return (
+            <div className="container">
+                <form>
+                    {aulas}
+                    <a onClick={this.handleAdcionarAulas}>Adicionar</a>
+                </form>
+            </div>
+        );
     }
 }
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../imgs/compasso.png';
 import LinkWrapper from '../utils/LinkWrapper';
-import { Redirect } from 'react-router-dom';
 import '../css/login.css';
 
 class Login extends Component {
