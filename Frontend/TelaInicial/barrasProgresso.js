@@ -6,7 +6,7 @@
 
     // pega a quantidade de alunos na turma de cada um dos 6 cursos 
         // EM BREVE
-        var totalcursos = [];
+        var alunocursos = [];
         var porcentagem = [];
 
             // for (i=o; i<nomedoscursos.length; i++) {
@@ -20,7 +20,7 @@
         var totalalunos = 0
         for (i=0; i < alunocursos.length; i++) {
             totalalunos += alunocursos[i]
-            console.log(totalaluno);
+            console.log(totalalunos);
         }
 
     // calcula a porcentagem dos cursos
