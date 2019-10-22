@@ -1,3 +1,4 @@
+const verifyJWT = require('../utils/jwtAutenticacao');
 require("dotenv-safe").config();
 var jwt = require('jsonwebtoken');
 
@@ -25,7 +26,7 @@ module.exports = function (app) {
                     emailBanco = null;
                 }
                 if (senhaBanco !== req.body.senha || emailBanco !== req.body.email) {
-                    res.status(500).send('Login inválido');
+                    res.status(503).send('Login inválido');
 
                 }
                 else {
@@ -47,7 +48,7 @@ module.exports = function (app) {
     });
 
     app.post('/teste', verifyJWT, function (req, res) {
-        res.send(" funciono");
+        res.status(503).send(" funciono");
     });
 
 
@@ -76,15 +77,3 @@ module.exports = function (app) {
 
 }
 
-function verifyJWT(req, res, next) {
-    var token = req.headers['x-access-token'];
-    if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
-
-    jwt.verify(token, process.env.SECRET, function (err, decoded) {
-        if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
-
-        // se tudo estiver ok, salva no request para uso posterior
-        req.userId = decoded.id;
-        next();
-    });
-}

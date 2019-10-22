@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import logo from '../imgs/compasso.png';
 import LinkWrapper from '../utils/LinkWrapper';
+import { Redirect } from 'react-router-dom';
+import '../css/login.css';
 
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = { msg: '' };//this.props.location.query.msg
+        this.state = {}; //msg: this.props.location.query.msg
     }
 
 
@@ -18,7 +20,7 @@ class Login extends Component {
         if (re.test(texto)) {
             const requestInfo = {
                 method: 'POST',
-                body: JSON.stringify({ login: this.login.value, senha: this.senha.value }),
+                body: JSON.stringify({ email: this.login.value, senha: this.senha.value }),
                 headers: new Headers({
                     'Content-type': 'application/json'
                 })
@@ -29,13 +31,13 @@ class Login extends Component {
                     if (response.ok) {
                         return response.text();
                     } else {
-                        throw new Error('não foi possí­vel fazer o login');
+                        throw new Error('Não foi possí­vel fazer o login');
                     }
                 })
-                /*  .then(token => {
-                     localStorage.setItem('auth-token', token);
-                     browserHistory.push('/timeline');
-                 }) */
+                .then(token => {
+                    localStorage.setItem('auth-token', token);
+                    this.props.history.push("/teste");
+                })
                 .catch(error => {
                     this.setState({ msg: error.message });
                 });
