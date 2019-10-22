@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './css/login.css';
+import './css/form_user.css';
 import Login from './componentes/Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CadastroLogin from './componentes/CadastroLogin';
+
 
 ReactDOM.render(
     <BrowserRouter>

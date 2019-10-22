@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/form_user.css';
+import logo from '../imgs/compasso.png';
 
 class CadastroLogin extends Component {
     constructor(props) {
@@ -61,7 +62,7 @@ class CadastroLogin extends Component {
             <div className="wrapper">
                 <div className="fadeInDown formContent container">
                     <div className="fadeIn first">
-                        <img src="../imgs/compasso.png" id="icon" alt="User Icon" />
+                        <img src={logo} id="icon" alt="User Icon" />
                     </div>
                     <span>{this.state.msg}</span>
                     <div className="form container">
@@ -71,10 +72,10 @@ class CadastroLogin extends Component {
                                 <label htmlFor="exampleInputEmail">Endereço de email</label>
                                 <input type="email" className="form-control" id="email" aria-describedby="emailHelp"
                                     placeholder="Seu email" ref={(input) => this.email = input} />
-                                <small id="emailHelp" className="form-text text-muted">Nunca vamos compartilhar seu email, com ninguÃ©m.</small>
+                                <small id="emailHelp" className="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleInputPassword1">Senha</label>
+                                <label htmlFor="exampleInputPassword1">Senha</label><br />
                                 <input type="password" className="form-control" id="senha" placeholder="Senha" ref={(input) => this.senha = input} />
                             </div>
                             <div className="form-group">
