@@ -1,9 +1,8 @@
-var porcentagem1 = 85   
-
 
 // LOGICA DO BANCO
     // pega os top 6 cursos cadastratos no banco
         // EM BREVE
+
 
     // pega a quantidade de alunos na turma de cada um dos 6 cursos 
         // EM BREVE
@@ -12,22 +11,11 @@ var porcentagem1 = 85
     // pega o total de alunos cadastrados em todos os 6 cursos
         // EM BREVE
 
-
-
-
-
-
-
-
-
-
-
-
-
+       
 
 window.onload = function() { 
 		
-    animateprogress("#html5",this.porcentagem1);
+    animateprogress("#html5",85);
     animateprogress("#php",72);
     animateprogress("#css",86);
     animateprogress("#python",52);
@@ -35,6 +23,7 @@ window.onload = function() {
     animateprogress("#nodejs",36);
     
 } 	
+
 
 function animateprogress (id, val){    
  
@@ -58,13 +47,13 @@ function animateprogress (id, val){
     if (i<=val)
         {
             document.querySelector(id).setAttribute("value",i);      /* <----  Aumenta o valor da barra de progresso */
-            document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- aumenta a porcentagem e mostro na tag span */
+            document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Aumenta a porcentagem e mostro na tag span */
             i++;
-            fpAnimationFrame(animacion);          /* <------------------ Enquanto o contador não atinge a porcentagem definida, a função é chamada novamente com fpAnimationFrame   */
+            fpAnimationFrame(animacion);      /* <----- Enquanto o contador não atinge a porcentagem definida, a função é chamada novamente com fpAnimationFrame   */
         }
                                          
     }
  
-        fpAnimationFrame(animacion);   /*  <---- chama a animação pela primera vez usando fpAnimationFrame para que se execute a 60fps  */
+        fpAnimationFrame(animacion);   /*  <---- Chama a animação pela primeira vez usando fpAnimationFrame para que se execute a 60fps  */
                  
 }
