@@ -20,7 +20,7 @@
 
 .search {
  margin-left: 85%;
- margin-top: 3%;
+ margin-top: 18px;
 }
 
 .search > h1,
@@ -41,7 +41,7 @@
   width: 4px;
   height: 20px;
   position: absolute;
-  top: 40px;
+  top: 36px;
   right: 2px;
   transform: rotate(135deg);
   box-shadow: 1px 0 #0d489b;
@@ -51,8 +51,8 @@
   color: white;
   font-size: 16px;
   background: transparent;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   padding: 10px;
   border: solid 3px white;
   outline: none;
