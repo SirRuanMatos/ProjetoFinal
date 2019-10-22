@@ -4,15 +4,31 @@ var porcentagem1 = 85
 // LOGICA DO BANCO
     // pega os top 6 cursos cadastratos no banco
         // EM BREVE
-
+        var nomedoscursos = []
     // pega a quantidade de alunos na turma de cada um dos 6 cursos 
         // EM BREVE
-        // (acredito que vai ser um for dentro de outro)
+        var totalcursos = [];
+        var porcentagem = [];
 
+        // for (i=o; i<nomedoscursos.length; i++) {
+        //     alunocursos.push()    
+        // }
+        // codigo acima que imagino que vai precisar para adicionar do banco!
+
+        alunocursos.push(100, 120, 75, 45, 126, 41);  // números ficticios, falta pegar numeros reais do banco
+        
     // pega o total de alunos cadastrados em todos os 6 cursos
-        // EM BREVE
+        var totalalunos = 0
+        for (i=0; i < alunocursos.length; i++) {
+            totalalunos += alunocursos[i]
+            console.log(totalaluno);
+        }
 
-
+    // calcula a porcentagem dos cursos
+        for (i=0; i < alunocursos.length; i++) { 
+            porcentagem.push((alunocursos[i] * 100) / totalalunos)
+            console.log(porcentagem[i]);
+        }
 
 
 
