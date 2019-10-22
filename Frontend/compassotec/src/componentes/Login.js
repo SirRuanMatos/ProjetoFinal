@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../imgs/compasso.png';
+import LinkWrapper from '../utils/LinkWrapper';
 
 class Login extends Component {
     constructor(props) {
@@ -10,11 +11,9 @@ class Login extends Component {
 
     envia(event) {
         event.preventDefault();
+
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
         var texto = document.querySelector('#login').value;
-        //re.test(texto)
 
         if (re.test(texto)) {
             const requestInfo = {
@@ -25,7 +24,7 @@ class Login extends Component {
                 })
             };
 
-            fetch('http://localhost:8080/api/public/login', requestInfo)
+            fetch('http://localhost:8080/login', requestInfo)
                 .then(response => {
                     if (response.ok) {
                         return response.text();
@@ -63,9 +62,8 @@ class Login extends Component {
                         <input type="submit" className="fadeIn fourth" value="Log In" />
                     </form>
                     <div id="formFooter">
-                        <a className="underlineHover" href="#">Novo por aqui? Clique aqui!</a>
+                        <LinkWrapper className="underlineHover" to="/Cadastrar">Novo por aqui? Clique aqui!</LinkWrapper>
                     </div>
-
                 </div>
             </div>
         );
