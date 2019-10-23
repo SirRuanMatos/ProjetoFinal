@@ -33,12 +33,12 @@
 
 window.onload = function() { 
 		
-    animateprogress("#html5",85);
-    animateprogress("#php",72);
-    animateprogress("#css",86);
-    animateprogress("#python",52);
-    animateprogress("#javascript",79);
-    animateprogress("#nodejs",36);
+    animateprogress("#html5",this.porcentagem[1]);
+    animateprogress("#php",this.porcentagem[2]);
+    animateprogress("#css",this.porcentagem[3]);
+    animateprogress("#python",this.porcentagem[4]);
+    animateprogress("#javascript",this.porcentagem[5]);
+    animateprogress("#nodejs",this.porcentagem[6]);
     
 } 	
 

@@ -4,16 +4,38 @@ body {
   height: 100vh;  
 }
 
+.curso{
+  margin-top: 5%;
+  margin-left: 0%;
+}
+
+.tecnologia{
+  width: 60%;
+  float: left;
+  padding-right: 2%;
+
+}
+
+.alunos{
+  width: 40%;
+}
+
+#descricao{
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width: 100%;
+
+}
+
 
 .formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
     padding: 30px;
-    width: 90%;
-    max-width: 450px;
-    /*position: relative;*/
-    padding: 0px;
+    width: 900px;
+    height: 500px;
+    padding: 20px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   }
