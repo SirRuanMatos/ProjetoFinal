@@ -7,7 +7,6 @@
   height: 100vh;  
 }
 
-  /* AJUDA RUAN */
   .body_Login a {
     color: #92badd;
     display:inline-block;
@@ -15,7 +14,6 @@
     font-weight: 400;
   }
 
-  /* AJUDA RUAN */
   .body_Login h2 {
     text-align: center;
     font-size: 16px;
@@ -25,8 +23,6 @@
     margin: 40px 8px 10px 8px; 
     color: #cccccc;
   }
-  
-
   
   /* STRUCTURE */
   

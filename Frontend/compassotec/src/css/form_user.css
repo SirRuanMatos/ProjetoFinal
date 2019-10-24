@@ -1,23 +1,28 @@
-body {
+.body_CadastroLogin {
     background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
     font-family: "Poppins", sans-serif;
     height: 100vh;  
   }
 
-.form {
+.body_CadastroLogin form {
     margin-top: 5%;
 }
 
-.btn {
+.body_CadastroLogin h2{
+  font-size: 20px;
+  text-align: left;
+  margin-top: 12px;
+}
+.body_CadastroLogin .btn {
     width: 270px;
     margin-bottom: 5%;
 }
 
-.divbotao {
+.body_CadastroLogin .divbotao {
     text-align: center;
 }
 
-.formContent {
+.body_CadastroLogin .formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -30,7 +35,7 @@ body {
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   }
 
-.fadeInDown {
+.body_CadastroLogin .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
     -webkit-animation-duration: 1s;
@@ -65,7 +70,7 @@ body {
     }
   }
 
-  .wrapper {
+  .body_CadastroLogin .wrapper {
     display: flex;
     align-items: center;
     flex-direction: column; 
@@ -74,7 +79,7 @@ body {
     min-height: 100%;
     
   }
-  #icon {
+  .body_CadastroLogin #icon {
     margin-top: 5%;
     margin-left: 15%; 
     width:60%;
