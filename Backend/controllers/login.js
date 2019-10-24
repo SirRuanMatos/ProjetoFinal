@@ -4,6 +4,8 @@ var jwt = require('jsonwebtoken');
 
 module.exports = function (app) {
 
+
+
     app.post('/login', (req, res) => {
         var connection = app.persistencia.conexaoBanco();
         var loginDao = new app.persistencia.LoginDao(connection);
