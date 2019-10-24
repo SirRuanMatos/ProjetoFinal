@@ -4,7 +4,8 @@ import * as serviceWorker from './serviceWorker';
 import Login from './componentes/Login';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import CadastroLogin from './componentes/CadastroLogin';
-import Teste from './componentes/teste';
+import Aula from './componentes/Aula';
+import TelaEnsinar from './componentes/TelaEnsinar';
 //import { matchPattern } from 'react-router/lib/PatternUtils';
 
 function verificaAutenticacao(nextState, replace) {
@@ -23,7 +24,8 @@ ReactDOM.render(
         <Switch>
             <Route path="/" exact={true} component={Login} />
             <Route path="/Cadastrar" component={CadastroLogin} />
-            <Route path="/teste" render={() => (verificaAutenticacao() ? (<Teste />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
+            <Route path="/Ensinar" component={TelaEnsinar} />
+            <Route path="/teste" render={() => (verificaAutenticacao() ? (<Aula />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
             <Route render={() => <h1>404 Error</h1>} />
         </Switch>
     </BrowserRouter>

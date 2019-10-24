@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GrupoForm from './GrupoForm';
 
-class Teste extends Component {
+class Aula extends Component {
     constructor(props) {
         super(props);
         this.state = { aulas: [{ aId: 1 }], id: 1 };
@@ -35,10 +35,11 @@ class Teste extends Component {
 
         var idElem = 0;
         vetAulas.map(a => {
-            if (a.aId == id) {
+            if (a.aId === id) {
                 idElem = cont;
             }
             cont++;
+            return;
         });
         console.log(idElem);
         console.log(vetAulas);
@@ -63,6 +64,7 @@ class Teste extends Component {
 
 
             jsonEnvia.push(grupoFormJson);
+            return;
         });
 
         console.log(JSON.stringify(jsonEnvia));
@@ -122,4 +124,4 @@ class Teste extends Component {
     }
 }
 
-export default Teste;
+export default Aula;
