@@ -15,12 +15,13 @@
 }
 
 .search {
-  margin: 100px;
+  /*margin: 100px;*/
 }
 
+/*Posição*/
 .search {
- margin-left: 85%;
- margin-top: 18px;
+ margin-left: 78%;
+ margin-top: 19px;
 }
 
 .search > h1,
@@ -34,15 +35,15 @@
   display: inline-block;
   position: relative;
 }
-
+/*altera tamanha */
 .search > div:after {
   content: "";
   background: white;
   width: 4px;
   height: 20px;
   position: absolute;
-  top: 36px;
-  right: 2px;
+  top: 20px;
+  right: -2px;
   transform: rotate(135deg);
   box-shadow: 1px 0 #0d489b;
 }
@@ -53,7 +54,7 @@
   background: transparent;
   width: 15px;
   height: 15px;
-  padding: 10px;
+  padding: 11px;
   border: solid 3px white;
   outline: none;
   border-radius: 35px;
