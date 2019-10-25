@@ -1,0 +1,17 @@
+.logoFundo{
+    
+    background-image: linear-gradient(to right, #032452,#04285a, #04357a, #0d428b,#0d489b,#1251aa);
+    width: 100%;
+    height: 90px;
+    color: white;
+    
+  
+  }
+  .logoImg{
+  
+    position: absolute;
+    left: 10px;
+    top: 10px;
+   
+  }
+  0d489b
