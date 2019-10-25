@@ -21,7 +21,7 @@ class Ensinar extends Component {
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error('Não foi possí­vel fazer o login');
+                    throw new Error('Nï¿½o foi possï¿½ï¿½vel fazer o login');
                 }
             })
             .then(respostaJson => {
@@ -41,7 +41,7 @@ class Ensinar extends Component {
         const opts = this.state.tecnologias.map(a => <option key={a.idTecnologia + a.titulo} value={a.idTecnologia}>{a.titulo}</option>)
 
         return (
-            <div>
+            <div className="body_telaEnsinar">
                 <div className="wrapper">
                     <div className="form container">
                         <form>
@@ -69,8 +69,9 @@ class Ensinar extends Component {
                                     </div>
                                     <input type="text" aria-label="First name" className="form-control" placeholder="MÃ­nimo" />
                                     <input type="text" aria-label="Last name" className="form-control" placeholder="MÃ¡ximo" />
-                                </div>
+                                </div>                                
                                 <textarea id="descricao" cols="70" rows="10" placeholder="DescriÃ§Ã£o do Curso"></textarea>
+                                <textarea id="requisito" cols="50" rows="10" placeholder="Requisitos MÃ­nimos"></textarea>                            
                             </div>
                         </form>
                     </div>

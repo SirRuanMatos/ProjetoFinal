@@ -113,15 +113,23 @@ class Aula extends Component {
         )
 
         return (
-            <div className="container">
-                <form onSubmit={this.envia.bind(this)}>
-                    {aulas}
-                    <a onClick={this.handleAdcionarAulas}>Adicionar</a>
-                    <button type="submit">Enviar</button>
-                </form>
+            <div className="body_telaEnsinar">
+                
+                    <div className="form-group col-md 8"> 
+                        <div className="container">
+                            <form onSubmit={this.envia.bind(this)}>
+                                {aulas}
+                                <span className="input-group-text adicionar" id="inputGroup-sizing-default">
+                                <a onClick={this.handleAdcionarAulas}>Adicionar</a>
+                                </span>
+                                <button type="submit"  className="input-group-text remover" id="inputGroup-sizing-default">Enviar</button>
+                            </form>
+                        </div>             
+                    </div>  
+                     
             </div>
         );
     }
-}
+} 
 
 export default Aula;

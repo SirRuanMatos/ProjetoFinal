@@ -1,34 +1,52 @@
-body {
+/********** Ensinar ************/
+.body_telaEnsinar {
   background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
   font-family: "Poppins", sans-serif;
-  height: 100vh;  
+  height: 470px;  
 }
 
-.curso{
+.body_telaEnsinar .curso{
   margin-top: 5%;
   margin-left: 0%;
 }
 
-.tecnologia{
+.body_telaEnsinar .tecnologia{
   width: 60%;
   float: left;
   padding-right: 2%;
+  height: 38px;
 
 }
 
-.alunos{
+.body_telaEnsinar .alunos{
   width: 40%;
 }
 
-#descricao{
-  margin-top: 2%;
-  margin-bottom: 5%;
-  width: 100%;
+
+.body_telaEnsinar #descricao{
+  width: 58%;
+  float: left;
+  margin-top: 15px;
+}
+
+.body_telaEnsinar #requisito{
+  width: 40%;
+  margin-top: 15px;
+  margin-left: 20px;
+  
+}
+
+.body_telaEnsinar .adicionar{
+  width: 91px;
+  float: left;
+  margin-left: 12px;
+  margin-right: 10px;
+  
 
 }
 
 
-.formContent {
+.body_telaEnsinar .formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -40,7 +58,7 @@ body {
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   }
 
-.fadeInDown {
+.body_telaEnsinar.fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
     -webkit-animation-duration: 1s;
@@ -75,12 +93,58 @@ body {
     }
   }
 
-  .wrapper {
+ .body_telaEnsinar .wrapper {
     display: flex;
     align-items: center;
     flex-direction: column; 
     justify-content: center;
     width: 100%;
     min-height: 100%;
+  }
+  
+  /***********Adicionar aula**************/
+  .body_aula {
+    margin-left: 12px;
+    font-family: "Poppins", sans-serif;    
+  }
+
+  /*Span nomes*/
+  .body_aula .input-group-text {
+    border-radius: .25rem 0 0 .25rem;
+  }
+  /*imput textos*/
+  .body_aula .form-control{
+    border-radius: 0 .25rem.25rem 0;
+  }
+ 
+   /* imput topico*/
+   .body_aula .topico{
+    width: 270px;
+  }
+ 
+ 
+  /* imput local*/
+  .body_aula .local{
+    width: 230px;
+    
+  }
+/* imput data*/
+  .body_aula .data {
+    margin-top: 0px;
+    padding: 0px;
+    width: 150px;
+  }
+
+  /* imput hora*/
+  .body_aula .hora {
+    width: 110px;
+  }
+
+  /* botao remover */
+  .body_aula .remover {
+    border-radius:.25rem;
+    margin-left: 2px;
+    margin-bottom:15px;
+    float: left;
     
   }
