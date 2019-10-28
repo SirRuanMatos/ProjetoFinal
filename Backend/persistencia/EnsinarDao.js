@@ -3,7 +3,7 @@ function EnsinarDao(connection) {
 }
 
 EnsinarDao.prototype.inserirCurso = function (dadosEnsinar, idProfessor, callback) {
-    this._connection.query("INSERT INTO `curso`(`nome`, `codProfessor`, `codTecnologia`, `descricao`, `preRequisito`, `maxAlunos`, `minAlunos`) VALUES (?,?,?,?,?,?,?)", [dadosEnsinar.curso, idProfessor, dadosEnsinar.tecnologia, dadosEnsinar.descricao, "", dadosEnsinar.maxAlunos, dadosEnsinar.minAlunos], callback);
+    this._connection.query("INSERT INTO `curso`(`nome`, `codProfessor`, `codTecnologia`, `descricao`, `preRequisito`, `maxAlunos`, `minAlunos`) VALUES (?,?,?,?,?,?,?)", [dadosEnsinar.curso, idProfessor, dadosEnsinar.tecnologia, dadosEnsinar.descricao, dadosEnsinar.prerequisito, dadosEnsinar.maxAlunos, dadosEnsinar.minAlunos], callback);
 }
 
 EnsinarDao.prototype.inserirTurma = function (idCurso, callback) {
