@@ -45,11 +45,12 @@ class Ensinar extends Component {
         }
 
         this.props.setDadosEnsinar(jsonEnviar);
-        this.curso.value = "";
+        /* this.curso.value = "";
         this.descricao.value = "";
         this.tecnologia.value = "";
         this.minAlunos.value = "";
-        this.maxAlunos.value = "";
+        this.maxAlunos.value = ""; */
+        console.log("enviou");
 
     }
 
@@ -59,8 +60,7 @@ class Ensinar extends Component {
 
         return (
 
-            <div className="body_telaEnsinar" onBlur={this.envia}>
-
+            <div className="body_telaEnsinar" onBlurCapture={this.envia}>
                 <div className="wrapper">
                     <div className="form container">
                         <div className="container">
