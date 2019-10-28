@@ -1,4 +1,3 @@
-
 /*
     DEMO STYLE
 */
@@ -8,7 +7,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
-
 
 p {
     font-family: 'Poppins', sans-serif;
@@ -25,23 +23,22 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-#imgcompasso{
-    position:absolute;
-    left:10px;
-    top:55px;
-    
-    margin-top:-30px;}
+
+#imgcompasso {
+    position: absolute;
+    left: 10px;
+    top: 55px;
+    margin-top: -30px;
+}
 
 .navbar {
     padding: 22px 10px;
     /*background-image: linear-gradient(to right, #032452,#04285a, #04357a, #0d428b,#0d489b,#1251aa);
     background-image: linear-gradient(to right, #051d37,#051d37,  #051d37,#051d37, #051d37, #051d37, #051d37);  */
-    background-image: linear-gradient(to right, #0d1e36, #0d1e36, #0f223d, #122541, #122846);    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #0d1e36, #0d1e36, #0f223d, #122541, #122846);
+    margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     top: -21px;
-    
-    
-   
     /*
     // barra pequeno//
     padding: 11.2px 10px;    
@@ -69,6 +66,7 @@ span {
     display: inline-block;
 }
 
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -83,7 +81,7 @@ span {
     max-width: 250px;
     margin-top: -61px;
     background: rgba(10, 9, 9, 0.9);
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: all 0.3s;
 }
 
@@ -134,7 +132,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 10px;
-    background: rgba(0,0,0,.3)
+    background: rgba(0, 0, 0, .3)
 }
 
 #sidebar .sidebar-header strong {
@@ -144,7 +142,7 @@ span {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid (10, 9, 9, 0.9);
+    border-bottom: 1px solid rgba(10, 9, 9, 0.9);
 }
 
 #sidebar ul li a {
@@ -154,8 +152,8 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: (10, 9, 9, 0.9);
-    background: #fff;
+    /* color: rgba(10, 9, 9, 0.9);       cor dos itens da barra quando mouse em cima, padrão branco       */
+    background: #0d489b;
 }
 
 #sidebar ul li a i {
@@ -183,7 +181,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: rgb(0,0,0,.2);
+    background: rgb(0, 0, 0, .2);
 }
 
 ul.CTAs {
@@ -209,6 +207,7 @@ a.article:hover {
     color: #fff !important;
 }
 
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -219,6 +218,7 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
