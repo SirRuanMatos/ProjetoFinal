@@ -48,6 +48,24 @@ class Aula extends Component {
         // this.setState(aulas.splice(id));
         this.setState({ aulas: vetAulas });
     }
+    
+    // VALIDA CAMPO DATA (NAO TERMINADO)   PARA RODAR TIRAR O METODO
+    valida() {
+        vetAulas.map(a => {
+            if (a.aId === id) {
+                idElem = cont;
+            }
+            cont++;
+            return;
+        });
+        var strData = document.querySelector('[type="date"]')
+        var partesData = strData.split("/");
+        var data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+        if (data > new Date())
+            alert("maior");
+        if (data < new Date())
+            alert("menor");
+    }
 
 
     envia(event) {

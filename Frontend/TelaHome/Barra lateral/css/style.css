@@ -1,176 +1,246 @@
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
-a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+* {
+    outline: none;
+    user-select: none;
 }
 
-a:hover
-{
-  color: tomato;
+.profile {
+    margin: 0;
+    color: #0d1e36;
 }
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+body {
+    font-family: "Raleway", "Microsoft JhengHei", Arial, sans-serif;
 }
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+.profile {
+    width: 330px;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: #8797a7;
+    box-shadow: 0 0 1rem #cbd2d8c5;
+    animation: show-profile 0.5s forwards ease-in-out;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  -webkit-transform-origin: 4px 0px;
-  
-          transform-origin: 4px 0px;
-  
-  transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+@keyframes show-profile {
+    0% {
+        width: 0;
+    }
 }
 
-#menuToggle span:first-child
-{
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+.profile .photo,
+.profile .content {
+    box-sizing: border-box;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+.profile .photo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #1e3a58;
+    background-color: #5e7288;
+    margin-left: -50px;
+    box-shadow: 0 0 0.5rem #1e3a58;
+    animation: rotate-photo 5.100s forwards ease-in-out;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+@keyframes rotate-photo {
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
+.profile .photo img {
+    width: 100%;
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
+.profile .content {
+    padding: 10px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  -webkit-transform-origin: 0% 0%;
-  
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-  
-  transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+.profile .content::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 150px;
+    background-color: #dbe5ec;
+    left: 0;
+    top: -20px;
+    z-index: -1;
+    transform: rotate(-8deg);
 }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
+.profile .content .text {
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  -webkit-transform: none;
-          transform: none;
+.profile .content .text h3,
+.profile .content .text h6 {
+    font-weight: normal;
+    margin: 3px 0;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.profile .content .btn {
+    background-color: #abc;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    animation: pop-btn 0.3s both ease-in-out 0.5s;
+}
+
+@keyframes pop-btn {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.profile .content .btn:hover {
+    box-shadow: 0 0 0 5px rgba(170, 187, 204, 0.5);
+}
+
+.profile .content .btn span {
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    animation: to-hamburger 0.3s forwards ease-in-out;
+}
+
+.profile .content .btn span::before,
+.profile .content .btn span::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    transition-duration: 0.3s;
+    transform: rotate(0deg);
+    right: 0;
+}
+
+.profile .content .btn span::before {
+    margin-top: -7px;
+}
+
+.profile .content .btn span::after {
+    margin-top: 7px;
+}
+
+.profile .content .btn.ativo span {
+    animation: to-arrow 0.3s forwards ease-in-out;
+}
+
+.profile .content .btn.ativo span::before,
+.profile .content .btn.ativo span::after {
+    width: 60%;
+    right: -1px;
+}
+
+.profile .content .btn.ativo span::before {
+    transform: rotate(45deg);
+}
+
+.profile .content .btn.ativo span::after {
+    transform: rotate(-45deg);
+}
+
+@keyframes to-hamburger {
+    from {
+        transform: translateY(-50%) rotate(-180deg);
+    }
+}
+
+@keyframes to-arrow {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+.profile .box {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    right: -40%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.3s;
+}
+
+.profile .box i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: 18px;
+    top: calc(75px - 50px/2);
+    box-shadow: 0 0 0.5rem #babbbc;
+    transition-duration: 0.3s;
+}
+
+.profile .box i:hover {
+    transition-delay: initial !important;
+    box-shadow: 0 0 0 5px #babbbc;
+}
+
+.profile .box.aberto {
+    opacity: 1;
+}
+
+.profile .box.aberto i {
+    left: 18px;
+    top: 50.5px;
+}
+
+.profile .box.aberto i:nth-of-type(2) {
+    transform: rotate(-45deg) translateX(120px) rotate(45deg);
+    transition-delay: 0.1s;
+}
+
+.profile .box.aberto i:nth-of-type(3) {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+    transition-delay: 0.2s;
+}
+
+.profile .box.aberto i:nth-of-type(4) {
+    transform: rotate(45deg) translateX(120px) rotate(-45deg);
+    transition-delay: 0.3s;
 }
