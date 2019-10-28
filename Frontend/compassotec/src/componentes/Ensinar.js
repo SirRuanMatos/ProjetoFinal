@@ -6,6 +6,7 @@ class Ensinar extends Component {
     constructor() {
         super();
         this.state = { tecnologias: [{ idTecnologias: '', titulo: '' }] }
+        this.envia = this.envia.bind(this);
     }
 
 
@@ -21,7 +22,7 @@ class Ensinar extends Component {
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error('N�o foi poss��vel fazer o login');
+                    throw new Error('N�o foi poss��vel fazer o login');
                 }
             })
             .then(respostaJson => {
@@ -33,46 +34,67 @@ class Ensinar extends Component {
 
     }
 
+    envia() {
+        var jsonEnviar = {
+            curso: this.curso.value,
+            descricao: this.descricao.value,
+            tecnologia: this.tecnologia.value,
+            minAlunos: this.minAlunos.value,
+            maxAlunos: this.maxAlunos.value,
+        }
+
+        this.props.setDadosEnsinar(jsonEnviar);
+        this.curso.value = "";
+        this.descricao.value = "";
+        this.tecnologia.value = "";
+        this.minAlunos.value = "";
+        this.maxAlunos.value = "";
+
+    }
+
     render() {
-        const arr = this.state.tecnologias;
-        var l = arr.length;
-        var count = 0;
 
         const opts = this.state.tecnologias.map(a => <option key={a.idTecnologia + a.titulo} value={a.idTecnologia}>{a.titulo}</option>)
 
         return (
-            <div>
+
+            <div className="body_telaEnsinar" onBlur={this.envia}>
+
                 <div className="wrapper">
                     <div className="form container">
-                        <form>
-                            <div className="container">
-                                <div className="input-group mb-3 curso">
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text" id="inputGroup-sizing-default">Nome do Curso</span>
-                                    </div>
-                                    <input type="text" className="form-control nome-curso" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Curso" />
+                        <div className="container">
+                            <div className="input-group mb-3 curso">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="inputGroup-sizing-default">Nome do Curso</span>
                                 </div>
-                                <div className="tecnologia">
-                                    <div className="input-group mb-3 ">
-                                        <div className="input-group-prepend">
-                                            <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
-                                        </div>
-                                        <select className="custom-select" id="inputGroupSelect01">
-                                            <option defaultValue>Selecione</option>
-                                            {opts}
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="input-group alunos">
+                                <input type="text" className="form-control nome-curso" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Curso" ref={(input) => this.curso = input} />
+                            </div>
+                            <div className="tecnologia">
+                                <div className="input-group mb-3 ">
                                     <div className="input-group-prepend">
-                                        <span className="input-group-text">Alunos</span>
+                                        <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
                                     </div>
+
                                     <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" />
                                     <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" />
-                                </div>
+                                </div>                                
                                 <textarea id="descricao" cols="70" rows="10" placeholder="Descrição do Curso"></textarea>
+                                <textarea id="requisito" cols="50" rows="10" placeholder="Requisitos Mínimos"></textarea> 
+                                <select className="custom-select" id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
+                                        <option defaultValue>Selecione</option>
+                                        {opts}
+                                    </select>                                                       
                             </div>
-                        </form>
+                            <div className="input-group alunos">
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">Alunos</span>
+                                </div>
+                                <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" ref={(input) => this.minAlunos = input} />
+                                <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" ref={(input) => this.maxAlunos = input} />
+                            </div>
+                            <textarea id="descricao" cols="70" rows="10" placeholder="Descrição do Curso" ref={(input) => this.descricao = input} ></textarea>
+                        </div>
+
                     </div>
                 </div>
             </div>

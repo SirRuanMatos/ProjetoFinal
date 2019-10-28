@@ -6,6 +6,7 @@ class Aula extends Component {
         super(props);
         this.state = { aulas: [{ aId: 1 }], id: 1 };
         this.handleAdcionarAulas = this.handleAdcionarAulas.bind(this);
+        this.envia = this.envia.bind(this);
 
     }
 
@@ -41,11 +42,7 @@ class Aula extends Component {
             cont++;
             return;
         });
-        console.log(idElem);
-        console.log(vetAulas);
         vetAulas.splice(idElem, 1);
-        console.log(vetAulas);
-        // this.setState(aulas.splice(id));
         this.setState({ aulas: vetAulas });
     }
     
@@ -68,61 +65,24 @@ class Aula extends Component {
     }
 
 
-    envia(event) {
-        event.preventDefault();
+    envia() {
 
         var jsonEnvia = [];
         this.state.aulas.map(a => {
-            let topico = document.querySelector('#topico' + a.aId).value;
-            let local = document.querySelector('#local' + a.aId).value;
-            let data = document.querySelector('#data' + a.aId).value;
-            let hora = document.querySelector('#hora' + a.aId).value;
+            var topico = document.querySelector('#topico' + a.aId).value;
+            var local = document.querySelector('#local' + a.aId).value;
+            var data = document.querySelector('#data' + a.aId).value;
+            var hora = document.querySelector('#hora' + a.aId).value;
 
             var grupoFormJson = { topico: topico, local: local, data: data, hora: hora }
 
 
             jsonEnvia.push(grupoFormJson);
-            return;
+
         });
 
-        console.log(JSON.stringify(jsonEnvia));
-
-
-        /* 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                var texto = document.querySelector('#login').value;
-        
-                if (re.test(texto)) {
-                    const requestInfo = {
-                        method: 'POST',
-                        body: JSON.stringify({ email: this.login.value, senha: this.senha.value }),
-                        headers: new Headers({
-                            'Content-type': 'application/json'
-                        })
-                    };
-        
-                    fetch('http://localhost:8080/login', requestInfo)
-                        .then(response => {
-                            if (response.ok) {
-                                return response.text();
-                            } else {
-                                throw new Error('Não foi possí­vel fazer o login');
-                            }
-                        })
-                        .then(token => {
-                            localStorage.setItem('auth-token', token);
-                            this.props.history.push("/teste");
-                        })
-                        .catch(error => {
-                            this.setState({ msg: error.message });
-                        });
-                }
-                else {
-                    this.setState({ msg: "Digite um email válido" });
-                    //throw new Error("Digite um email válido");
-                }
-         */
-
+        this.props.setDadosAula(jsonEnvia);
+        this.setState({ aulas: [{ aId: this.state.id + 1 }], id: this.state.id + 1 });
     }
 
     render() {
@@ -131,15 +91,25 @@ class Aula extends Component {
         )
 
         return (
-            <div className="container">
-                <form onSubmit={this.envia.bind(this)}>
-                    {aulas}
-                    <a onClick={this.handleAdcionarAulas}>Adicionar</a>
-                    <button type="submit">Enviar</button>
-                </form>
+
+            <div className="body_telaEnsinar">
+                
+                    <div className="form-group col-md 8"> 
+                        <div className="container">
+                            <form onSubmit={this.envia.bind(this)}>
+                                {aulas}
+                                <span className="input-group-text adicionar" id="inputGroup-sizing-default">
+                                <a onClick={this.handleAdcionarAulas}>Adicionar</a>
+                                </span>
+                                <button type="submit" onClick={this.envia} className="input-group-text remover" id="inputGroup-sizing-default">Enviar</button>
+                            </form>
+                        </div>             
+                    </div>  
+                     
+
             </div>
         );
     }
-}
+} 
 
 export default Aula;
