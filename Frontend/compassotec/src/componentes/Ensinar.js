@@ -38,17 +38,19 @@ class Ensinar extends Component {
         var jsonEnviar = {
             curso: this.curso.value,
             descricao: this.descricao.value,
+            prerequisito: this.prerequisito.value,
             tecnologia: this.tecnologia.value,
             minAlunos: this.minAlunos.value,
             maxAlunos: this.maxAlunos.value,
         }
 
         this.props.setDadosEnsinar(jsonEnviar);
-        this.curso.value = "";
+        /* this.curso.value = "";
         this.descricao.value = "";
         this.tecnologia.value = "";
         this.minAlunos.value = "";
-        this.maxAlunos.value = "";
+        this.maxAlunos.value = ""; */
+        console.log("enviou");
 
     }
 
@@ -58,8 +60,7 @@ class Ensinar extends Component {
 
         return (
 
-            <div className="body_telaEnsinar" onBlur={this.envia}>
-
+            <div className="body_telaEnsinar" onBlurCapture={this.envia}>
                 <div className="wrapper">
                     <div className="form container">
                         <div className="container">
@@ -69,22 +70,21 @@ class Ensinar extends Component {
                                 </div>
                                 <input type="text" className="form-control nome-curso" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Curso" ref={(input) => this.curso = input} />
                             </div>
+
                             <div className="tecnologia">
                                 <div className="input-group mb-3 ">
                                     <div className="input-group-prepend">
                                         <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
                                     </div>
 
-                                    <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" />
-                                    <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" />
-                                </div>                                
-                                <textarea id="descricao" cols="70" rows="10" placeholder="Descrição do Curso"></textarea>
-                                <textarea id="requisito" cols="50" rows="10" placeholder="Requisitos Mínimos"></textarea> 
-                                <select className="custom-select" id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
+                                    <select className="custom-select" id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
                                         <option defaultValue>Selecione</option>
                                         {opts}
-                                    </select>                                                       
+                                    </select>
+                                </div>
                             </div>
+
+
                             <div className="input-group alunos">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text">Alunos</span>
@@ -92,7 +92,15 @@ class Ensinar extends Component {
                                 <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" ref={(input) => this.minAlunos = input} />
                                 <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" ref={(input) => this.maxAlunos = input} />
                             </div>
-                            <textarea id="descricao" cols="70" rows="10" placeholder="Descrição do Curso" ref={(input) => this.descricao = input} ></textarea>
+                            <div className="input-group mt-3">
+
+
+
+                            </div>
+                            <div className="input-group">
+                                <textarea id="descricao" className="form-control" cols="70" rows="10" placeholder="Descrição do Curso" ref={(input) => this.descricao = input}></textarea>
+                                <textarea id="requisito" className="form-control" cols="50" rows="10" placeholder="Requisitos Mínimos" ref={(input) => this.prerequisito = input}></textarea>
+                            </div>
                         </div>
 
                     </div>

@@ -270,13 +270,11 @@
   
   
   /* OTHERS */
-  
   .body_Login *:focus {
       outline: none;
   } 
-  
   .body_Login #icon {
     width:60%;
-    margin: 0%;
+    margin-right: 10px;
   }
   
