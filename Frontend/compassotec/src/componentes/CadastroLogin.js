@@ -78,7 +78,7 @@ class CadastroLogin extends Component {
                         <div className="fadeIn first">
                             <img src={logo} id="icon" alt="User Icon" />
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center">
                             <span className={(this.state.isActive) ? 'd-none alert alert-success' : 'block fadeIn alert alert-success fadeInDown'}>{this.state.msg}</span>
                             <span className={(this.state.isActiveError) ? 'd-none alert alert-danger' : 'block fadeIn alert alert-danger fadeInDown'}>{this.state.msg}</span>
                         </div>
