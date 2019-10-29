@@ -5,7 +5,7 @@ import logo from '../imgs/compasso.png';
 class CadastroLogin extends Component {
     constructor(props) {
         super(props);
-        this.state = { msg: '' };
+        this.state = { msg: '', isActive: true, isActiveError: true };
     }
 
     envia(event) {
@@ -34,7 +34,7 @@ class CadastroLogin extends Component {
                 if (response.ok) {
                     return response.text();
                 } else {
-                    throw new Error('não foi possí­vel fazer o login');
+                    throw new Error('Não foi possí­vel realizar o cadastro');
                 }
             })
             .then(text => {
@@ -47,9 +47,22 @@ class CadastroLogin extends Component {
                 this.confirmarSenha.value = '';
                 this.tipoUsuario.value = '';
                 this.solicitarAdm.checked = false;
+                this.setState({ msg: 'Usuário criado com sucesso' });
+                this.setState({ isActive: !this.state.isActive });
+                setTimeout(() => {
+                    this.setState({ isActive: !this.state.isActive });
+                    this.props.history.push("/");
+                }, 2000);
+
+
+
             })
             .catch(error => {
                 this.setState({ msg: error.message });
+                this.setState({ isActiveError: !this.state.isActiveError });
+                setTimeout(() => {
+                    this.setState({ isActiveError: !this.state.isActiveError });
+                }, 2000);
             });
 
 
@@ -65,7 +78,10 @@ class CadastroLogin extends Component {
                         <div className="fadeIn first">
                             <img src={logo} id="icon" alt="User Icon" />
                         </div>
-                        <span>{this.state.msg}</span>
+                        <div class="d-flex justify-content-center">
+                            <span className={(this.state.isActive) ? 'd-none alert alert-success' : 'block fadeIn alert alert-success fadeInDown'}>{this.state.msg}</span>
+                            <span className={(this.state.isActiveError) ? 'd-none alert alert-danger' : 'block fadeIn alert alert-danger fadeInDown'}>{this.state.msg}</span>
+                        </div>
                         <div className="form container">
                             <h2>Cadastro de Usuario:</h2>
                             <form onSubmit={this.envia.bind(this)}>
@@ -101,7 +117,7 @@ class CadastroLogin extends Component {
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         );
     }
 }

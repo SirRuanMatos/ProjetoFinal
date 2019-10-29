@@ -25,7 +25,7 @@ ReactDOM.render(
             <Route path="/" exact={true} component={Login} />
             <Route path="/Cadastrar" component={CadastroLogin} />
             <Route path="/Ensinar" component={TelaEnsinar} />
-            <Route path="/teste" render={() => (verificaAutenticacao() ? (<Aula />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
+            <Route path="/Ensinar" render={() => (verificaAutenticacao() ? (<Aula />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
 
             <Route render={() => <h1>404 Error</h1>} />
         </Switch>
