@@ -6,7 +6,7 @@ import '../css/login.css';
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {}; //msg: this.props.location.query.msg
+        this.state = { isActive: true }; //msg: this.props.location.query.msg
     }
 
 
@@ -39,11 +39,14 @@ class Login extends Component {
                 })
                 .catch(error => {
                     this.setState({ msg: error.message });
+                    this.setState({ isActive: !this.state.isActive });
+                    setTimeout(() => { this.setState({ isActive: !this.state.isActive }); }, 2000);
                 });
         }
         else {
             this.setState({ msg: "Digite um email válido" });
-            //throw new Error("Digite um email válido");
+            this.setState({ isActive: !this.state.isActive });
+            setTimeout(() => { this.setState({ isActive: !this.state.isActive }); }, 2000);
         }
 
 
@@ -57,7 +60,7 @@ class Login extends Component {
                         <div className="fadeIn first">
                             <img src={logo} id="icon" alt="User Icon" />
                         </div>
-                        <span>{this.state.msg}</span>
+                        <span className={(this.state.isActive) ? 'd-none alert alert-danger' : 'block fadeIn alert alert-danger'} id="msgLogin">{this.state.msg}</span>
                         <form onSubmit={this.envia.bind(this)}>
                             <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" ref={(input) => this.login = input} />
                             <input type="password" id="password" className="fadeIn third" name="login" placeholder="password" ref={(input) => this.senha = input} />
