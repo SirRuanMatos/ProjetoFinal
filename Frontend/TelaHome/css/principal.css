@@ -3,35 +3,35 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
+.body_Principal {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
 
-p {
+.body_Principal p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
     color: rgb(73, 61, 61);
 }
-
-a,
-a:hover,
-a:focus {
+/*erro area adm*/
+.body_Principal a,
+.body_Principal a:hover,
+.body_Principal a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
 }
 
-#imgcompasso {
+.body_Principal #imgcompasso {
     position: absolute;
     left: 10px;
     top: 55px;
     margin-top: -30px;
 }
 
-.navbar {
+.body_Principal .navbar {
     padding: 22px 10px;
     /*background-image: linear-gradient(to right, #032452,#04285a, #04357a, #0d428b,#0d489b,#1251aa);
     background-image: linear-gradient(to right, #051d37,#051d37,  #051d37,#051d37, #051d37, #051d37, #051d37);  */
@@ -48,20 +48,20 @@ a:focus {
 */
 }
 
-.navbar-btn {
+.body_Principal .navbar-btn {
     box-shadow: none;
     outline: none !important;
     border: none;
 }
 
-.line {
+.body_Principal .line {
     width: 100%;
     height: 1px;
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
 }
 
-i,
+.body_Principal i,
 span {
     display: inline-block;
 }
@@ -71,12 +71,12 @@ span {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
+.body_Principal .wrapper {
     display: flex;
     align-items: stretch;
 }
 
-#sidebar {
+.body_Principal #sidebar {
     min-width: 250px;
     max-width: 250px;
     margin-top: -61px;
@@ -85,43 +85,44 @@ span {
     transition: all 0.3s;
 }
 
-#sidebar.active {
+.body_Principal #sidebar.active {
     min-width: 80px;
     max-width: 80px;
     text-align: center;
 }
 
-#sidebar.active .sidebar-header h3,
-#sidebar.active .CTAs {
+.body_Principal #sidebar.active .sidebar-header h3,
+.body_Principal #sidebar.active .CTAs {
+    display: none;
     
 }
 
-#sidebar.active .sidebar-header strong {
+.body_Principal #sidebar.active .sidebar-header strong {
     display: block;
 }
 
-#sidebar ul li{
+.body_Principal #sidebar ul li{
     text-align: left;
 }
 
-#sidebar.active ul li a {
+.body_Principal #sidebar.active ul li a {
     padding: 20px 10px;
     text-align: center;
     font-size: 0.85em;
 }
 
-#sidebar.active ul li a i {
+.body_Principal #sidebar.active ul li a i {
     margin-right: 0;
     display: block;
     font-size: 1.8em;
     margin-bottom: 5px;
 }
 
-#sidebar.active ul ul a {
+.body_Principal #sidebar.active ul ul a {
     padding: 10px !important;
 }
 
-#sidebar.active .dropdown-toggle::after {
+.body_Principal #sidebar.active .dropdown-toggle::after {
     top: auto;
     bottom: 10px;
     right: 50%;
@@ -130,47 +131,47 @@ span {
     transform: translateX(50%);
 }
 
-#sidebar .sidebar-header {
+.body_Principal #sidebar .sidebar-header {
     padding: 10px;
     background: rgba(0, 0, 0, .3)
 }
 
-#sidebar .sidebar-header strong {
+.body_Principal #sidebar .sidebar-header strong {
     display: none;
     font-size: 1.8em;
 }
 
-#sidebar ul.components {
+.body_Principal #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid rgba(10, 9, 9, 0.9);
 }
 
-#sidebar ul li a {
+.body_Principal #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 }
 
-#sidebar ul li a:hover {
+.body_Principal #sidebar ul li a:hover {
     /* color: rgba(10, 9, 9, 0.9);       cor dos itens da barra quando mouse em cima, padrão branco       */
     background: #0d489b;
 }
 
-#sidebar ul li a i {
+.body_Principal #sidebar ul li a i {
     margin-right: 10px;
 }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
+.body_Principal #sidebar ul li.active>a,
+.body_Principal a[aria-expanded="true"] {
     color: #fff;
     background: #0d489b;
 }
 
-a[data-toggle="collapse"] {
+.body_Principal a[data-toggle="collapse"] {
     position: relative;
 }
 
-.dropdown-toggle::after {
+.body_Principal .dropdown-toggle::after {
     display: block;
     position: absolute;
     top: 50%;
@@ -178,17 +179,17 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-ul ul a {
+.body_Principal ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: rgb(0, 0, 0, .2);
 }
 
-ul.CTAs {
+.body_Principal ul.CTAs {
     padding: 20px;
 }
 
-ul.CTAs a {
+.body_Principal ul.CTAs a {
     text-align: center;
     font-size: 0.9em !important;
     display: block;
@@ -196,18 +197,18 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.download {
+.body_Principal a.download {
     background: #fff;
     color: #2a2a2a;
     height: 60px;
     
 
 }
-.xt{
+.body_Principal .xt{
 font-size: 16px;    
 }
-a.article,
-a.article:hover {
+.body_Principal a.article,
+.body_Principal a.article:hover {
     background: #1a1a1a !important;
     color: #fff !important;
 }
@@ -217,7 +218,7 @@ a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 
-#content {
+.body_Principal #content {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
@@ -230,13 +231,13 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
-    #sidebar {
+    .body_Principal #sidebar {
         min-width: 80px;
         max-width: 80px;
         text-align: center;
         margin-left: -80px !important;
     }
-    .dropdown-toggle::after {
+    .body_Principal .dropdown-toggle::after {
         top: auto;
         bottom: 10px;
         right: 50%;
@@ -244,36 +245,36 @@ a.article:hover {
         -ms-transform: translateX(50%);
         transform: translateX(50%);
     }
-    #sidebar.active {
+    .body_Principal #sidebar.active {
         margin-left: 0 !important;
     }
-    #sidebar .sidebar-header h3,
-    #sidebar .CTAs {
+    .body_Principal #sidebar .sidebar-header h3,
+    .body_Principal #sidebar .CTAs {
         display: none;
     }
-    #sidebar .sidebar-header strong {
+    .body_Principal #sidebar .sidebar-header strong {
         display: block;
     }
-    #sidebar ul li a {
+    .body_Principal #sidebar ul li a {
         padding: 20px 10px;
     }
-    #sidebar ul li a span {
+    .body_Principal #sidebar ul li a span {
         font-size: 0.85em;
     }
-    #sidebar ul li a i {
+    .body_Principal #sidebar ul li a i {
         margin-right: 0;
         display: block;
     }
-    #sidebar ul ul a {
+    .body_Principal #sidebar ul ul a {
         padding: 10px !important;
     }
-    #sidebar ul li a i {
+    .body_Principal #sidebar ul li a i {
         font-size: 1.3em;
     }
-    #sidebar {
+    .body_Principal #sidebar {
         margin-left: 0;
     }
-    #sidebarCollapse span {
+    .body_Principal #sidebarCollapse span {
         display: none;
     }
 }
