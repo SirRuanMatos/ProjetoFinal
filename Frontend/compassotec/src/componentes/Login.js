@@ -35,7 +35,7 @@ class Login extends Component {
                 })
                 .then(token => {
                     localStorage.setItem('auth-token', token);
-                    this.props.history.push("/teste");
+                    this.props.history.push("/Ensinar");
                 })
                 .catch(error => {
                     this.setState({ msg: error.message });
