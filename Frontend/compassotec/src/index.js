@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import Login from './componentes/Login';
+import Login from './paginas/Login';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import CadastroLogin from './componentes/CadastroLogin';
-import Aula from './componentes/Aula';
-import TelaEnsinar from './componentes/TelaEnsinar';
-//import { matchPattern } from 'react-router/lib/PatternUtils';
+import CadastroLogin from './paginas/CadastroLogin';
+import TelaEnsinar from './paginas/TelaEnsinar';
 
 function verificaAutenticacao(nextState, replace) {
     //const resultado = matchPattern('/timeline(/:login)', nextState.location.pathname);
@@ -25,7 +23,7 @@ ReactDOM.render(
             <Route path="/" exact={true} component={Login} />
             <Route path="/Cadastrar" component={CadastroLogin} />
             <Route path="/Ensinar" component={TelaEnsinar} />
-            <Route path="/Ensinar" render={() => (verificaAutenticacao() ? (<Aula />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
+            <Route path="/Ensinar" render={() => (verificaAutenticacao() ? (<TelaEnsinar />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
 
             <Route render={() => <h1>404 Error</h1>} />
         </Switch>

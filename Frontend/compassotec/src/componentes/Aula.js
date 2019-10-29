@@ -92,17 +92,15 @@ class Aula extends Component {
 
         return (
 
-            <div className="body_telaEnsinar">
+            <div className="body_telaEnsinar configAulas">
 
                 <div className="form-group col-md 8">
                     <div className="container">
-                        <form onSubmit={this.envia.bind(this)}>
-                            {aulas}
-                            <span className="input-group-text adicionar" id="inputGroup-sizing-default">
-                                <a onClick={this.handleAdcionarAulas}>Adicionar</a>
-                            </span>
-                            <button type="submit" onClick={this.envia} className="input-group-text remover" id="inputGroup-sizing-default">Enviar</button>
-                        </form>
+                        {aulas}
+                        <span className="input-group-text adicionar" id="inputGroup-sizing-default">
+                            <a onClick={this.handleAdcionarAulas}>Adicionar</a>
+                        </span>
+                        <button type="submit" onClick={this.envia} className="input-group-text remover" id="inputGroup-sizing-default">Enviar</button>
                     </div>
                 </div>
 

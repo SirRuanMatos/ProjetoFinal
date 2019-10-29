@@ -1,150 +1,155 @@
 /********** Ensinar ************/
 .body_telaEnsinar {
-  background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
+  background-image: linear-gradient(
+    to right,
+    #2564c2,
+    #1773cd,
+    #0982d7,
+    #0791df,
+    #179fe7
+  );
   font-family: "Poppins", sans-serif;
-  height: 470px;  
+  height: 380px;
+  margin-top: -30px;
+  padding-right: 50px;
+  display: block;
 }
 
-.body_telaEnsinar .curso{
+.configAulas {
+  padding-top: 100px;
+}
+
+.body_telaEnsinar .curso {
   margin-top: 5%;
   margin-left: 0%;
 }
 
-.body_telaEnsinar .tecnologia{
+.body_telaEnsinar .tecnologia {
   width: 60%;
   float: left;
   padding-right: 2%;
   height: 38px;
-
 }
 
-.body_telaEnsinar .alunos{
+.body_telaEnsinar .alunos {
   width: 40%;
 }
 
-
-.body_telaEnsinar #descricao{
+.body_telaEnsinar #descricao {
   width: 58%;
   float: left;
   margin-top: 15px;
 }
 
-.body_telaEnsinar #requisito{
+.body_telaEnsinar #requisito {
   width: 40%;
   margin-top: 15px;
   margin-left: 20px;
-  
 }
 
-.body_telaEnsinar .adicionar{
+.body_telaEnsinar .adicionar {
   width: 91px;
   float: left;
   margin-left: 12px;
   margin-right: 10px;
-  
-
 }
 
-
 .body_telaEnsinar .formContent {
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background: #fff;
-    padding: 30px;
-    width: 900px;
-    height: 500px;
-    padding: 20px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  }
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 900px;
+  height: 500px;
+  padding: 20px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
 
 .body_telaEnsinar.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
-  
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
+}
 
- .body_telaEnsinar .wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
-  
-  /***********Adicionar aula**************/
-  .body_aula {
-    margin-left: 12px;
-    font-family: "Poppins", sans-serif;    
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
+}
 
-  /*Span nomes*/
-  .body_aula .input-group-text {
-    border-radius: .25rem 0 0 .25rem;
-  }
-  /*imput textos*/
-  .body_aula .form-control{
-    border-radius: 0 .25rem.25rem 0;
-  }
- 
-   /* imput topico*/
-   .body_aula .topico{
-    width: 270px;
-  }
- 
- 
-  /* imput local*/
-  .body_aula .local{
-    width: 230px;
-    
-  }
+.body_telaEnsinar .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+/***********Adicionar aula**************/
+.body_aula {
+  margin-left: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Span nomes*/
+.body_aula .input-group-text {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+/*imput textos*/
+.body_aula .form-control {
+  border-radius: 0 0.25rem.25rem 0;
+}
+
+/* imput topico*/
+.body_aula .topico {
+  width: 270px;
+}
+
+/* imput local*/
+.body_aula .local {
+  width: 230px;
+}
 /* imput data*/
-  .body_aula .data {
-    margin-top: 0px;
-    padding: 0px;
-    width: 150px;
-  }
+.body_aula .data {
+  margin-top: 0px;
+  padding: 0px;
+  width: 150px;
+}
 
-  /* imput hora*/
-  .body_aula .hora {
-    width: 110px;
-  }
+/* imput hora*/
+.body_aula .hora {
+  width: 110px;
+}
 
-  /* botao remover */
-  .body_aula .remover {
-    border-radius:.25rem;
-    margin-left: 2px;
-    margin-bottom:15px;
-    float: left;
-    
-  }
+/* botao remover */
+.body_aula .remover {
+  border-radius: 0.25rem;
+  margin-left: 2px;
+  margin-bottom: 15px;
+  float: left;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import Ensinar from "./Ensinar";
-import Aula from "./Aula";
+import Ensinar from "../componentes/Ensinar";
+import Aula from "../componentes/Aula";
+import Navbar from "../componentes/Navbar";
+import Sidebar from '../componentes/Sidebar';
+import $ from 'jquery';
 
 
 class TelaEnsinar extends Component {
@@ -58,12 +61,17 @@ class TelaEnsinar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.envia}>
-                <span>{this.state.msg}</span>
-                <Ensinar setDadosEnsinar={this.setDadosEnsinar} />
-                <Aula setDadosAula={this.setDadosAulas} />
-            </form>
-
+            <div className="body_Principal2">
+                <Navbar />
+                <div className="wrapper">
+                    <Sidebar />
+                    <form onSubmit={this.envia}>
+                        <span>{this.state.msg}</span>
+                        <Ensinar setDadosEnsinar={this.setDadosEnsinar} />
+                        <Aula setDadosAula={this.setDadosAulas} />
+                    </form>
+                </div>
+            </div>
         );
     }
 }
