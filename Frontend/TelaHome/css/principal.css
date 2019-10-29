@@ -13,7 +13,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: rgb(73, 61, 61);
 }
 
 a,
@@ -93,14 +93,14 @@ span {
 
 #sidebar.active .sidebar-header h3,
 #sidebar.active .CTAs {
-    display: none;
+    
 }
 
 #sidebar.active .sidebar-header strong {
     display: block;
 }
 
-#sidebar ul li a {
+#sidebar ul li{
     text-align: left;
 }
 
@@ -199,8 +199,13 @@ ul.CTAs a {
 a.download {
     background: #fff;
     color: #2a2a2a;
-}
+    height: 60px;
+    
 
+}
+.xt{
+font-size: 16px;    
+}
 a.article,
 a.article:hover {
     background: #1a1a1a !important;

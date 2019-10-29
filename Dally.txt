@@ -1,0 +1,21 @@
+//
+distaque melhor para a tela login(cores);
+//
+redirecionamentoda tela login;
+//
+tela ensinar, modificar as cores, destaques do botoes.
+opções da hora, organizar;
+//
+slq
+historico de cursos cursados,
+historico de aulas dadas,
+qual o curso mas procurado,
+//
+popularidade 
+usar logicar das matriculas do curso,
+turmas em aberto e pocentagem em alunos
+mudar cor da barra de acordo com o nivel de alunos inscristos,
+
+
+
+
