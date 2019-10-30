@@ -7,6 +7,8 @@ class Aula extends Component {
         this.state = { aulas: [{ aId: 1 }], id: 1 };
         this.handleAdcionarAulas = this.handleAdcionarAulas.bind(this);
         this.envia = this.envia.bind(this);
+        this.validaAula = this.validaAula.bind(this);
+        this.validaCurso = this.validaCurso.bind(this);
 
     }
 
@@ -46,23 +48,79 @@ class Aula extends Component {
         this.setState({ aulas: vetAulas });
     }
 
-    // VALIDA CAMPO DATA (NAO TERMINADO)   PARA RODAR TIRAR O METODO
-    /*   valida() {
-          vetAulas.map(a => {
-              if (a.aId === id) {
-                  idElem = cont;
+    validaCurso(event) {
+      event.preventDefault();
+      var min = document.querySelector('#min').value
+      var max = document.querySelector('#max').value
+      console.log(min);
+      console.log(max);
+  
+      if (min < 1) {
+        console.log('Min menor que 1');
+        return false
+      }
+      if (max < 1) {
+        console.log('Max menor que 1');
+        return false
+      }
+      
+  
+    }
+  
+  
+    validaAula(event) {
+      event.preventDefault();
+      let IdLinha = this.state.aulas;
+      IdLinha.map(linha => {
+  
+  
+        var hora = document.querySelector('#hora' + linha.aId).value;
+        var horadividida = hora.split(':')
+  
+        
+        var data = document.querySelector("#data" + linha.aId).value;
+        var datadividida = data.split('-');
+        
+        datadividida[1] = parseInt(datadividida[1]) - 1;
+        datadividida[1] = datadividida[1].toString();
+        
+        // HOJE
+        var hoje = new Date();
+  
+        if (datadividida[0] < hoje.getFullYear()) {
+          console.log('Ano Menor');
+          return false;
+        } else if (datadividida[0] == hoje.getFullYear()) {
+          console.log('Ano Igual');
+          if (datadividida[1] < hoje.getMonth()) {
+            console.log('Mes Menor');
+            return false;
+          } else if (datadividida[1] == hoje.getMonth()) {
+            console.log('Mes Igual');
+            if (datadividida[2] < hoje.getDate()) {
+              console.log('Data menor');
+              return false;
+            } else if (datadividida[2] == hoje.getDate()) {
+              console.log('Data Igual');
+              if (horadividida[0] < hoje.getHours()) {
+                console.log('Hora menor');
+                return false;
+              } else if (horadividida[0] == hoje.getHours()) {
+                console.log('Hora Igual');
+                if (horadividida[1] < hoje.getMinutes()) {
+                  console.log('Minuto menor');
+                  return false;
+                } else if (horadividida[1] == hoje.getMinutes()) {
+                  console.log('Minuto igual');
+                  return false;
+                }
               }
-              cont++;
-              return;
-          });
-          var strData = document.querySelector('[type="date"]')
-          var partesData = strData.split("/");
-          var data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
-          if (data > new Date())
-              alert("maior");
-          if (data < new Date())
-              alert("menor");
-      } */
+            }
+          }
+        } else return true;
+        
+      });
+    }
 
 
     envia() {

@@ -3,7 +3,6 @@ import Ensinar from "../componentes/Ensinar";
 import Aula from "../componentes/Aula";
 import Navbar from "../componentes/Navbar";
 import Sidebar from '../componentes/Sidebar';
-import $ from 'jquery';
 
 
 class TelaEnsinar extends Component {
