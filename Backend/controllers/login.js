@@ -70,9 +70,28 @@ module.exports = function (app) {
             }
 
         });
-
-
     });
+
+    app.post('/login/infoMenu', verifyJWT, (req, res) => {
+        var connection = app.persistencia.conexaoBanco();
+        var loginDao = new app.persistencia.LoginDao(connection);
+
+        loginDao.infoMenu(req.userId, (exception, request, response, retorno) => {
+            if (exception) {
+                console.log(exception);
+                res.status(500).send(exception);
+                return;
+            }
+            else {
+                console.log(request);
+
+                res.status(200).json(request);
+            }
+
+        });
+    });
+
+
 
 
 
