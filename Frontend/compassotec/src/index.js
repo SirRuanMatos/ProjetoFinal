@@ -5,6 +5,7 @@ import Login from './paginas/Login';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import CadastroLogin from './paginas/CadastroLogin';
 import TelaEnsinar from './paginas/TelaEnsinar';
+import Logout from './utils/Logout';
 
 function verificaAutenticacao(nextState, replace) {
     //const resultado = matchPattern('/timeline(/:login)', nextState.location.pathname);
@@ -24,7 +25,7 @@ ReactDOM.render(
             <Route path="/Cadastrar" component={CadastroLogin} />
             <Route path="/Ensinar" component={TelaEnsinar} />
             <Route path="/Ensinar" render={() => (verificaAutenticacao() ? (<TelaEnsinar />) : (<Redirect to="/?msg=Você precisa estar logado para acessar a Timeline!" />))} />
-
+            <Route path="/Logout" component={Logout} />
             <Route render={() => <h1>404 Error</h1>} />
         </Switch>
     </BrowserRouter>

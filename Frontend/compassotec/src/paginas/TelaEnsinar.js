@@ -65,11 +65,13 @@ class TelaEnsinar extends Component {
                 <Navbar />
                 <div className="wrapper">
                     <Sidebar />
-                    <form onSubmit={this.envia}>
-                        <span>{this.state.msg}</span>
-                        <Ensinar setDadosEnsinar={this.setDadosEnsinar} />
-                        <Aula setDadosAula={this.setDadosAulas} />
-                    </form>
+                    <div className="conteudo">
+                        <form onSubmit={this.envia}>
+                            <span>{this.state.msg}</span>
+                            <Ensinar setDadosEnsinar={this.setDadosEnsinar} />
+                            <Aula setDadosAula={this.setDadosAulas} />
+                        </form>
+                    </div>
                 </div>
             </div>
         );

@@ -1,4 +1,8 @@
 /********** Ensinar ************/
+.conteudo {
+  width: 100%;
+}
+
 .body_telaEnsinar {
   background-image: linear-gradient(
     to right,

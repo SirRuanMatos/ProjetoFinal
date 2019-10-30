@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LinkWrapper from '../utils/LinkWrapper';
 
 
 class Sidebar extends Component {
@@ -114,8 +115,7 @@ class Sidebar extends Component {
 
                         </li>
                         <li>
-
-                            <a href="https://bootstrapious.com/p/bootstrap-sidebar" className="article center">Sair</a>
+                            <LinkWrapper to="/Logout" className="article center">Sair</LinkWrapper>
                         </li>
                     </ul>
                 </div>
