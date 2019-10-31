@@ -1,0 +1,99 @@
+body{
+    background-color: #2564c2;
+    font-family: serif;
+}
+
+html { overflow-y: hidden; }
+
+.container{
+    padding-top: 2px;
+    background-color: #2564c2;
+    width: 90%;
+    height: 720px;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.item-box{
+    width: 96%;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#fafafa;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.item-text{
+    margin-left: 10px;
+    font-size: 24pt;
+    font-family: Arial;
+}
+/*c*/
+.requisitos-box{
+    margin-left: 2%;
+    border-radius: 5px;
+    margin-top: 30px;
+    height: 520px;
+    width: 30%;
+    background-color: #2564c2;
+    float: left;
+}
+
+.requisitos{
+    height: 250px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fafafa;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.requisitos-text{
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 20pt;
+    font-family: Arial;
+}
+
+.descricao{
+    margin-right: 2%;
+    border-radius: 5px;
+    margin-top: 30px;
+    height: 480px;
+    background-color: #fafafa;
+    width: 64%;
+    float: right;
+}
+
+.descricao-text{
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 20pt;
+    font-family: Arial;
+}
+/* 
+.collection-item-down{
+    margin-bottom: 10px !important;
+} */
+
+.buttons{
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 40%;
+}
+
+.button{
+    margin-left: 2%;
+    float: right;  
+}
+
+.btn-large{
+    background-color: rgb(79, 140, 175) !important;
+}
+
+.collection-item{
+    background-color: rgb(101, 145, 180) !important;
+}
