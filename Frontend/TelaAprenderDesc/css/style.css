@@ -1,11 +1,12 @@
-body{
+.body_telaAprenderDescriscao{
     background-color: #2564c2;
     font-family: serif;
+
 }
-
-html { overflow-y: hidden; }
-
-.container{
+/*para tira scroll, testa react 
+.body_telaAprenderDescriscao html { overflow-y: hidden; }
+*/
+.body_telaAprenderDescriscao .batata{
     padding-top: 2px;
     background-color: #2564c2;
     width: 90%;
@@ -15,7 +16,7 @@ html { overflow-y: hidden; }
     margin-right: 5%;
 }
 
-.item-box{
+.body_telaAprenderDescriscao .item-box{
     width: 96%;
     height: 50px;
     border-radius: 5px;
@@ -24,13 +25,13 @@ html { overflow-y: hidden; }
     margin-left: 2%;
 }
 
-.item-text{
+.body_telaAprenderDescriscao .item-text{
     margin-left: 10px;
     font-size: 24pt;
-    font-family: Arial;
+   font-family: sa;
 }
 /*c*/
-.requisitos-box{
+.body_telaAprenderDescriscao .requisitos-box{
     margin-left: 2%;
     border-radius: 5px;
     margin-top: 30px;
@@ -40,7 +41,7 @@ html { overflow-y: hidden; }
     float: left;
 }
 
-.requisitos{
+.body_telaAprenderDescriscao .requisitos{
     height: 250px;
     border-radius: 5px;
     width: 100%;
@@ -49,14 +50,14 @@ html { overflow-y: hidden; }
     margin-bottom: 10px;
 }
 
-.requisitos-text{
+.body_telaAprenderDescriscao .requisitos-text{
     padding-top: 10px;
     margin-left: 10px;
     font-size: 20pt;
     font-family: Arial;
 }
 
-.descricao{
+.body_telaAprenderDescriscao .descricao{
     margin-right: 2%;
     border-radius: 5px;
     margin-top: 30px;
@@ -66,7 +67,7 @@ html { overflow-y: hidden; }
     float: right;
 }
 
-.descricao-text{
+.body_telaAprenderDescriscao .descricao-text{
     padding-top: 10px;
     margin-left: 10px;
     font-size: 20pt;
@@ -77,7 +78,7 @@ html { overflow-y: hidden; }
     margin-bottom: 10px !important;
 } */
 
-.buttons{
+.body_telaAprenderDescriscao .buttons{
     float: right;
     margin-right: 2%;
     margin-top: 2%;
@@ -85,15 +86,15 @@ html { overflow-y: hidden; }
     width: 40%;
 }
 
-.button{
+.body_telaAprenderDescriscao .button{
     margin-left: 2%;
     float: right;  
 }
 
-.btn-large{
+.body_telaAprenderDescriscao .btn-large{
     background-color: rgb(79, 140, 175) !important;
 }
 
-.collection-item{
-    background-color: rgb(101, 145, 180) !important;
+.body_telaAprenderDescriscao .collection-item{
+    background-color: rgb(251, 253, 255) !important;
 }
