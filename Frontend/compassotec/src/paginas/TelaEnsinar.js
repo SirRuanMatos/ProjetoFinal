@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Ensinar from "../componentes/Ensinar";
 import Aula from "../componentes/Aula";
-import Navbar from "../componentes/Navbar";
-import Sidebar from '../componentes/Sidebar';
 
 
 class TelaEnsinar extends Component {

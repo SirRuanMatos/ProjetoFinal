@@ -17,9 +17,7 @@ function verificaAutenticacao(nextState, replace) {
     //const enderecoPrivadoTimeline = resultado.paramValues[0] === undefined;
     //enderecoPrivadoTimeline && 
     if (localStorage.getItem('auth-token') != null) {
-        console.log("cheuei aqui");
         return true;
-
     }
 }
 

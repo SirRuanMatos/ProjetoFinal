@@ -10,6 +10,10 @@ AprenderDao.prototype.pegarAulas = function (idTurma, callback) {
     this._connection.query("SELECT aula.topico, aula.local, aula.data, aula.hora  FROM `aula` WHERE aula.codTurma = ?", [idTurma], callback);
 }
 
+AprenderDao.prototype.buscarCursosTecnologia = function (idTecnologia, callback) {
+    this._connection.query("SELECT curso.idCurso as x, curso.nome,curso.maxAlunos,curso.minAlunos,(SELECT COUNT(idTurma) FROM `turma` INNER JOIN matricula on turma.idTurma = matricula.codTurma INNER JOIN curso on curso.idCurso = turma.codCurso WHERE curso.idCurso = x) AS matriculados  FROM `curso` WHERE curso.codTecnologia = ?", [idTecnologia], callback);
+}
+
 module.exports = () => {
     return AprenderDao;
 }

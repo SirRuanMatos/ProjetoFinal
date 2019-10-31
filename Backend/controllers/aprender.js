@@ -4,10 +4,8 @@ var jwt = require('jsonwebtoken');
 
 
 module.exports = function (app) {
-    //, verifyJWT
 
-
-    app.post('/aprender/descricao/curso/:idCurso', (req, res) => {
+    app.post('/aprender/descricao/curso/:idCurso', verifyJWT, (req, res) => {
         var jsonEnviar = [];
         var connection = app.persistencia.conexaoBanco();
         var aprenderDao = new app.persistencia.AprenderDao(connection);
@@ -36,11 +34,27 @@ module.exports = function (app) {
                         res.status(200).json(jsonEnviar);
                     }
                 });
-
             }
-
-
         })
-    })
+    });
+
+    app.get('/aprender/buscar/cursos/tecnolgia/:idTecnologia', verifyJWT, (req, res) => {
+        var jsonEnviar = [];
+        var connection = app.persistencia.conexaoBanco();
+        var aprenderDao = new app.persistencia.AprenderDao(connection);
+
+        var idTecnologia = req.params.idTecnologia;
+
+        aprenderDao.buscarCursosTecnologia(idTecnologia, (exception, request, response, retorno) => {
+            if (exception) {
+                res.status(500).send("Não foi possível listar os cursos");
+                return;
+            }
+            else {
+                jsonEnviar.push(request);
+                res.status(200).json(jsonEnviar);
+            }
+        });
+    });
 
 }

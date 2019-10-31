@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LinkWrapper from '../utils/LinkWrapper';
 
 class ItemCursoBusca extends Component {
 
@@ -9,19 +10,19 @@ class ItemCursoBusca extends Component {
 
     render() {
         return (
-            <a href="#" className="list-group-item list-group-item-action ">
-                Curso 1
+            <LinkWrapper to={"/Aprender/Curso/" + this.props.idCurso} className="list-group-item list-group-item-action ">
+                {this.props.nome}
                 <span className="badge badge-danger badge-pill span-lista-maximo">
-                    Máximo: 14
+                    Máximo: {this.props.maxAlunos}
                 </span>
                 <span className="badge badge-primary badge-pill span-lista-minimo">
-                    Mínimo: 14
+                    Mínimo: {this.props.minAlunos}
                 </span >
                 <span
                     className="badge badge-success badge-pill span-lista-matriculados">
-                    Matriculados: 5
+                    Matriculados: {this.props.matriculados}
                 </span>
-            </a>
+            </LinkWrapper>
         );
     }
 }

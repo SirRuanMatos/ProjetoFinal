@@ -6,7 +6,6 @@ class SelectTecnologia extends Component {
     constructor(props) {
         super(props);
         this.state = { tecnologias: [{ idTecnologias: '', titulo: '' }] }
-
     }
 
     componentWillMount() {
@@ -36,7 +35,7 @@ class SelectTecnologia extends Component {
     render() {
         //data-live-search="true" liveSearchPlaceholder="Pesquisar"
         const Select = (
-            <select className="custom-select " id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
+            <select className="custom-select" onChange={this.props.pesuisarCurso} id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
                 {this.state.tecnologias.map(a => <option key={a.idTecnologia + a.titulo} value={a.idTecnologia} data-tokens={a.titulo}>{a.titulo}</option>)}
             </select>
         );
