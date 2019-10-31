@@ -83,7 +83,7 @@ class TelaAprenderBusca extends Component {
     render() {
         const cursos = this.state.cursos.map((cursosInfo, index) => {
 
-            var tab = cursosInfo.map(curso => <ItemCursoBusca idCurso={curso.x} nome={curso.nome} maxAlunos={curso.maxAlunos} minAlunos={curso.minAlunos} matriculados={curso.matriculados} />)
+            var tab = cursosInfo.map(curso => <ItemCursoBusca key={"curso"+curso.x} idCurso={curso.x} nome={curso.nome} maxAlunos={curso.maxAlunos} minAlunos={curso.minAlunos} matriculados={curso.matriculados} />)
 
             return tab;
         })

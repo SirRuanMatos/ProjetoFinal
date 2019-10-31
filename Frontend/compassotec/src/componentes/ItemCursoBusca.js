@@ -3,11 +3,6 @@ import LinkWrapper from '../utils/LinkWrapper';
 
 class ItemCursoBusca extends Component {
 
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         return (
             <LinkWrapper to={"/Aprender/Curso/" + this.props.idCurso} className="list-group-item list-group-item-action ">
