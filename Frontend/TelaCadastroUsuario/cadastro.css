@@ -1,0 +1,19 @@
+
+.body_cadastro_usuario {
+    margin-top: 10%;
+}
+
+.body_cadastro_usuario .genero_linha {
+    margin-left: 3em;
+    margin-right: 3em;
+    text-align: center
+}
+
+.body_cadastro_usuario .genero {
+    width:7em;
+    text-align: center
+}
+
+.body_cadastro_usuario .telefone {
+    text-align: center;
+}
