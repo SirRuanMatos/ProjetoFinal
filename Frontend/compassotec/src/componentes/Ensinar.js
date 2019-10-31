@@ -1,37 +1,12 @@
 import React, { Component } from 'react';
 import '../css/telaEnsinar.css';
+import SelectTecnologia from '../componentes/SelectTecnologia';
 
 class Ensinar extends Component {
 
     constructor() {
         super();
-        this.state = { tecnologias: [{ idTecnologias: '', titulo: '' }] }
         this.envia = this.envia.bind(this);
-    }
-
-
-    componentDidMount() {
-
-        const requestInfo = {
-            method: 'POST',
-            body: JSON.stringify({}),
-        };
-
-        fetch('http://localhost:8080/tecnologias/listar/nomes', requestInfo)
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('N�o foi poss��vel fazer o login');
-                }
-            })
-            .then(respostaJson => {
-                this.setState({ tecnologias: respostaJson });
-            })
-            .catch(error => {
-                console.log(error);
-            });
-
     }
 
     envia() {
@@ -39,7 +14,7 @@ class Ensinar extends Component {
             curso: this.curso.value,
             descricao: this.descricao.value,
             prerequisito: this.prerequisito.value,
-            tecnologia: this.tecnologia.value,
+            tecnologia: document.querySelector('#inputGroupSelect01').value,
             minAlunos: this.minAlunos.value,
             maxAlunos: this.maxAlunos.value,
         }
@@ -55,8 +30,6 @@ class Ensinar extends Component {
     }
 
     render() {
-
-        const opts = this.state.tecnologias.map(a => <option key={a.idTecnologia + a.titulo} value={a.idTecnologia}>{a.titulo}</option>)
 
         return (
 
@@ -76,11 +49,7 @@ class Ensinar extends Component {
                                     <div className="input-group-prepend">
                                         <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
                                     </div>
-
-                                    <select className="custom-select" id="inputGroupSelect01" ref={(input) => this.tecnologia = input}>
-                                        <option defaultValue>Selecione</option>
-                                        {opts}
-                                    </select>
+                                    <SelectTecnologia />
                                 </div>
                             </div>
 

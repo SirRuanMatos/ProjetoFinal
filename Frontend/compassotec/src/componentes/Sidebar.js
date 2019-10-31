@@ -19,6 +19,11 @@ class Sidebar extends Component {
 
     componentWillMount() {
         var token = JSON.parse(localStorage.getItem('auth-token'));
+
+        if (token === null) {
+            token = { token: '' }
+        }
+
         const requestInfo = {
             method: 'POST',
             headers: new Headers({
@@ -26,6 +31,8 @@ class Sidebar extends Component {
                 'x-access-token': token.token
             })
         };
+
+
 
         fetch('http://localhost:8080/login/infoMenu', requestInfo)
             .then(response => {
@@ -64,16 +71,16 @@ class Sidebar extends Component {
                     </li>
 
                     <li>
-                        <a href="#">
+                        <LinkWrapper to="/Aprender">
                             <i className="fas fa-book f-24" ></i>
                             <span className="list-unstyled CTAs f-20" >Aprender</span>
-                        </a>
+                        </LinkWrapper>
                     </li>
                     <li>
-                        <a href="#">
+                        <LinkWrapper to="/Ensinar">
                             <i className="fas fa-user-graduate f-24" ></i>
                             <span className="list-unstyled CTAs f-20" >Ensinar</span>
-                        </a>
+                        </LinkWrapper>
                     </li>
                     <li>
                         <a href="#">
