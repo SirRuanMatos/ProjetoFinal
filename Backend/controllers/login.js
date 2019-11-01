@@ -67,10 +67,19 @@ module.exports = function (app) {
             }
             else {
                 var idInserido = request.insertId;
-                var jsnoEnviar = {
-                    idInserido: idInserido
-                }
-                res.status(200).json(jsnoEnviar);
+
+                loginDao.inserirInfoUsuarios(req.body, idInserido, (exception, request, response, retorno) => {
+                    if (exception) {
+                        console.log(exception);
+                        res.status(500).send(exception);
+                        return;
+                    }
+                    else {
+
+                        res.status(200).send("Usuário cadastrado");
+                    }
+                });
+
             }
 
         });
@@ -80,17 +89,7 @@ module.exports = function (app) {
         var connection = app.persistencia.conexaoBanco();
         var loginDao = new app.persistencia.LoginDao(connection);
 
-        loginDao.inserirInfoUsuarios(req.body, (exception, request, response, retorno) => {
-            if (exception) {
-                console.log(exception);
-                res.status(500).send(exception);
-                return;
-            }
-            else {
 
-                res.status(200).send(request);
-            }
-        });
     });
 
     app.post('/login/infoMenu', verifyJWT, (req, res) => {
@@ -104,8 +103,6 @@ module.exports = function (app) {
                 return;
             }
             else {
-                console.log(request);
-
                 res.status(200).json(request);
             }
 

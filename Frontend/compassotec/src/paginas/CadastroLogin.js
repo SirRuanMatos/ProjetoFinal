@@ -12,16 +12,16 @@ class CadastroLogin extends Component {
         event.preventDefault();
 
         // coloca os campos pegos do html
-        /* const requestInfo = {
+        const requestInfo = {
             method: 'POST',
             body: JSON.stringify({
                 email: this.email.value,
                 senha: this.senha.value,
                 confirmarSenha: this.confirmarSenha.value,
-                tipoUsuario: this.tipoUsuario.value,
+                tipo: this.tipoUsuario.value,
                 nome: this.nome.value,
-                cidade:this.cidade.value,
-                dataNascimento: this.dataNascimento,
+                cidade: this.cidade.value,
+                dataNascimento: this.dataNascimento.value,
                 genero: this.genero.value,
                 telefone: this.telefone.value
             }),
@@ -34,7 +34,7 @@ class CadastroLogin extends Component {
         fetch('http://localhost:8080/login/cadastro', requestInfo)
             .then(response => {
                 if (response.ok) {
-                    return response.json();
+                    return response.text();
                 } else {
                     throw new Error('Não foi possí­vel realizar o cadastro');
                 }
@@ -61,21 +61,7 @@ class CadastroLogin extends Component {
                 setTimeout(() => {
                     this.setState({ isActiveError: !this.state.isActiveError });
                 }, 2000);
-            }); */
-
-        var a = {
-            email: this.email.value,
-            senha: this.senha.value,
-            confirmarSenha: this.confirmarSenha.value,
-            tipoUsuario: this.tipoUsuario.value,
-            nome: this.nome.value,
-            cidade: this.cidade.value,
-            dataNascimento: this.dataNascimento.value,
-            genero: this.genero.value,
-            telefone: this.telefone.value
-        }
-
-        console.log(a);
+            });
     }
 
 
@@ -129,7 +115,7 @@ class CadastroLogin extends Component {
                                         <label id="basic-addon1">Qual a sua cidade?</label>
                                     </div>
                                     <input type="text" className="form-control" placeholder="Sua cidade aqui" aria-label="Cidade"
-                                        aria-describedby="basic-addon1" id="fone" ref={(input) => this.cidade = input} />
+                                        aria-describedby="basic-addon1" id="cidade" ref={(input) => this.cidade = input} />
                                 </div>
 
                                 <div className="form-group mb-3">
