@@ -10,21 +10,32 @@ body{
     width: 60%;
 }
 
-.body_cadastro_usuario .genero_linha {
-
-    text-align: center
+.body_cadastro_usuario .titulo{
+    color: white;
+    margin-left:3%;
+    margin-bottom: 3%;
 }
 
-.body_cadastro_usuario .genero {
-    text-align: center
+.body_cadastro_usuario .foto{
+    text-align: center;
 }
 
 .body_cadastro_usuario .telefone {
-    text-align: center;
-    
+    width: 11.5em;
+    flex: 0;
 }
 
-.body_cadastro_usuario .selecione {
+.body_cadastro_usuario .data {
+    border: 1px solid #ced4da;
     border-radius:  0 .25rem .25rem 0;
-
+    text-align: center;
+    width: 10.8em;
+}
+.body_cadastro_usuario .genero_linha {
+    text-align: center
+}
+.body_cadastro_usuario .selecione-genero {
+    text-align: center;
+    border-radius:  0 .25rem .25rem 0;
+    width: 12.3em;
 }
