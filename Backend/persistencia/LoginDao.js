@@ -13,6 +13,9 @@ LoginDao.prototype.cadastraUsuario = function (form, callback) {
 LoginDao.prototype.infoMenu = function (idLogin, callback) {
     this._connection.query("SELECT nome,tipo FROM `pessoa` WHERE codLogin = ?;", [idLogin], callback);
 }
+LoginDao.prototype.inserirInfoUsuarios = function (formUsuario, callback) {
+    this._connection.query("INSERT INTO `pessoa`(`nome`, `dataNascimento`, `genero`, `codLogin`, `telefone`, `email`, `foto`, `cidade`, `tipo`) VALUES (?,?,?,?,?,?,?,?,?,?)", [formUsuario.nome, formUsuario.dataNascimento, formUsuario.genero, formUsuario.codLogin, formUsuario.telefone, formUsuario.email, formUsuario.foto, formUsuario.cidade, formUsuario.tipo], callback);
+}
 
 module.exports = () => {
     return LoginDao;
