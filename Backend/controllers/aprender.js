@@ -13,8 +13,12 @@ module.exports = function (app) {
         var idCurso = req.params.idCurso;
 
 
+
+
         aprenderDao.descreverCurso(idCurso, (exception, request, response, retorno) => {
             if (exception) {
+                console.log(exception);
+
                 res.status(500).send("Não foi possível listar o curso");
                 return;
             }

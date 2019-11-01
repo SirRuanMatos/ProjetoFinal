@@ -1,100 +1,104 @@
-.body_telaAprenderDescriscao{
-    background-color: #2564c2;
-    font-family: serif;
+.grupo-de-itens {
+  float: inherit;
+  width: -webkit-fill-available;
+}
 
+.body_telaAprenderDescriscao {
+  background-color: #2564c2;
+  font-family: serif;
 }
 /*para tira scroll, testa react 
 .body_telaAprenderDescriscao html { overflow-y: hidden; }
 */
-.body_telaAprenderDescriscao .batata{
-    padding-top: 2px;
-    background-color: #2564c2;
-    width: 90%;
-    height: 720px;
-    margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
+.body_telaAprenderDescriscao .batata {
+  padding-top: 2px;
+  background-color: #2564c2;
+  width: 90%;
+  height: 720px;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.body_telaAprenderDescriscao .item-box{
-    width: 96%;
-    height: 50px;
-    border-radius: 5px;
-    background-color:#fafafa;
-    margin-top: 2%;
-    margin-left: 2%;
+.body_telaAprenderDescriscao .item-box {
+  width: 96%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
-.body_telaAprenderDescriscao .item-text{
-    margin-left: 10px;
-    font-size: 24pt;
-   font-family: sa;
+.body_telaAprenderDescriscao .item-text {
+  margin-left: 10px;
+  font-size: 24pt;
+  font-family: sa;
 }
 /*c*/
-.body_telaAprenderDescriscao .requisitos-box{
-    margin-left: 2%;
-    border-radius: 5px;
-    margin-top: 30px;
-    height: 520px;
-    width: 30%;
-    background-color: #2564c2;
-    float: left;
+.body_telaAprenderDescriscao .requisitos-box {
+  margin-left: 2%;
+  border-radius: 5px;
+  margin-top: 30px;
+  height: 520px;
+  width: 30%;
+  background-color: #2564c2;
+  float: left;
 }
 
-.body_telaAprenderDescriscao .requisitos{
-    height: 250px;
-    border-radius: 5px;
-    width: 100%;
-    background-color: #fafafa;
-    float: left;
-    margin-bottom: 10px;
+.body_telaAprenderDescriscao .requisitos {
+  height: 250px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #fafafa;
+  float: left;
+  margin-bottom: 10px;
 }
 
-.body_telaAprenderDescriscao .requisitos-text{
-    padding-top: 10px;
-    margin-left: 10px;
-    font-size: 20pt;
-    font-family: Arial;
+.body_telaAprenderDescriscao .requisitos-text {
+  padding-top: 10px;
+  margin-left: 10px;
+  font-size: 20pt;
+  font-family: Arial;
 }
 
-.body_telaAprenderDescriscao .descricao{
-    margin-right: 2%;
-    border-radius: 5px;
-    margin-top: 30px;
-    height: 480px;
-    background-color: #fafafa;
-    width: 64%;
-    float: right;
+.body_telaAprenderDescriscao .descricao {
+  margin-right: 2%;
+  border-radius: 5px;
+  margin-top: 30px;
+  height: 480px;
+  background-color: #fafafa;
+  width: 64%;
+  float: right;
 }
 
-.body_telaAprenderDescriscao .descricao-text{
-    padding-top: 10px;
-    margin-left: 10px;
-    font-size: 20pt;
-    font-family: Arial;
+.body_telaAprenderDescriscao .descricao-text {
+  padding-top: 10px;
+  margin-left: 10px;
+  font-size: 20pt;
+  font-family: Arial;
 }
 /* 
 .collection-item-down{
     margin-bottom: 10px !important;
 } */
 
-.body_telaAprenderDescriscao .buttons{
-    float: right;
-    margin-right: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 40%;
+.body_telaAprenderDescriscao .buttons {
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 40%;
 }
 
-.body_telaAprenderDescriscao .button{
-    margin-left: 2%;
-    float: right;  
+.body_telaAprenderDescriscao .button {
+  margin-left: 2%;
+  float: right;
 }
 
-.body_telaAprenderDescriscao .btn-large{
-    background-color: rgb(79, 140, 175) !important;
+.body_telaAprenderDescriscao .btn-large {
+  background-color: rgb(79, 140, 175) !important;
 }
 
-.body_telaAprenderDescriscao .collection-item{
-    background-color: rgb(251, 253, 255) !important;
+.body_telaAprenderDescriscao .collection-item {
+  background-color: rgb(251, 253, 255) !important;
 }
