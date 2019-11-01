@@ -12,48 +12,69 @@
 </head>
 
 <body>
-    <table class="table table-bordered table-dark">
-        <thead>
-            <tr>
-
-                <th scope="col">Curso</th>
-                <th scope="col">Hora</th>
-                <th scope="col">Data</th>
-                <th scope="col">Local</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-
-                <td>
-                        <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action" id="curso">Dapibus ac facilisis in</a>
-                                </div>
-                <td>
-                    <p> 12:00</p>
-                    <p>10/12/19</p>
-                </td>
-                <td>Caxias do Sul</td>
-            </tr>
-            <tr>
-
-                <td>curso</td>
-                <td>
-                    <p> 12:00</p>
-                    <p>10/12/19</p>
-                </td>
-                <td>Caxias do sul</td>
-            </tr>
-            <tr>
-                <td>curso</td>
-                <td>
-                    <p> 12:00</p>
-                    <p>10/12/19</p>
-                </td>
-                <td>Caxias do sul</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="body_telaTurma">
+        <div class="container ">
+            <div class="txt">
+                <h1>Curso Matriculados</h1>
+            </div>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        
+                        <th class="w-50 p-3" scope="col">Curso</th>
+                        <th class="w-10 p-3" scope="col">Hora</th>
+                        <th class="w-10 p-3" scope="col">Data</th>
+                        <th class="w-30 p-3" scope="col">Local</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div id="cla" class="list-group">
+                        <tr id="linha">
+                            <td id="curso">
+                                <a href="#" class="list-group-item list-group-item-action ">JavaScript</a>
+                            <td id="hora">
+                                12:00
+                            </td>
+                            <td id="dia">
+                                10/12/19
+                            </td>
+                            <td id="endereco">
+                                Endereço: R. Gustavo Ramos Sehbe, 107 - Cinquentenário, Caxias do Sul - RS, 95012-669
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="list-group-item list-group-item-action ">Java</a>
+                            </td>
+                            <td>
+                                12:00
+                            </td>
+                            <td>
+                                10/12/19
+                            </td>
+                            <td>
+                                Endereço: R. Gustavo Ramos Sehbe, 107 - Cinquentenário, Caxias do Sul - RS, 95012-669
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="list-group-item list-group-item-action ">Python</a>
+                            </td>
+                            <td>
+                                12:00
+                            </td>
+                            <td>
+                                10/12/19
+                            </td>
+                            <td>
+                                Endereço: R. Gustavo Ramos Sehbe, 107 - Cinquentenário, Caxias do Sul - RS, 95012-669
+                            </td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
