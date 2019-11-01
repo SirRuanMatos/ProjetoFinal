@@ -34,7 +34,7 @@ module.exports = function (app) {
                 else {
                     const id = request[0].idLogin;
                     var token = jwt.sign({ id }, process.env.SECRET, {
-                        expiresIn: 3000 // expires in 50min
+                        expiresIn: 14400 // expires in 4 horas
                     });
                     res.status(200).send({ auth: true, token: token });
                 }

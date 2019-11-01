@@ -1,0 +1,38 @@
+body{
+    background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
+}
+
+.body_telaSugestao{
+    margin-top: 3%;
+}
+
+.body_telaSugestao #titulo{
+    color: white;
+    text-align: center;
+}
+
+.body_telaSugestao .frase1{
+    color: white;
+    margin-top: 3%;
+    margin-left: 0.5%; 
+}
+
+.body_telaSugestao .frase-input{
+    color: white;
+    margin-top: 2%;
+    margin-left:0.5%; 
+}
+
+.body_telaSugestao #total-sugestao{
+    width: 60%;
+}
+
+.body_telaSugestao #area-descricao{
+    width: 100%;
+    border-radius: .25rem .25rem .25rem .25rem ;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+.body_telaSugestao #botoes{
+    float: right;
+}
