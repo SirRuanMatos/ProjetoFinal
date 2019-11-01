@@ -66,9 +66,30 @@ module.exports = function (app) {
                 return;
             }
             else {
-                res.status(200).send("Usuário criado");
+                var idInserido = request.insertId;
+                var jsnoEnviar = {
+                    idInserido: idInserido
+                }
+                res.status(200).json(jsnoEnviar);
             }
 
+        });
+    });
+
+    app.post('/login/cadastro/usuario', (req, res) => {
+        var connection = app.persistencia.conexaoBanco();
+        var loginDao = new app.persistencia.LoginDao(connection);
+
+        loginDao.inserirInfoUsuarios(req.body, (exception, request, response, retorno) => {
+            if (exception) {
+                console.log(exception);
+                res.status(500).send(exception);
+                return;
+            }
+            else {
+
+                res.status(200).send(request);
+            }
         });
     });
 
