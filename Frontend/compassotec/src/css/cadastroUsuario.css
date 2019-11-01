@@ -1,30 +1,38 @@
-body{
-    background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
-    
+body {
+  background-image: linear-gradient(
+    to right,
+    #2564c2,
+    #1773cd,
+    #0982d7,
+    #0791df,
+    #179fe7
+  );
 }
 .body_cadastro_usuario {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
-.body_cadastro_usuario #total-cadastro{
-    width: 60%;
+.body_cadastro_usuario #data_nasc {
+  margin-top: 0 !important;
+  background-color: none !important;
+}
+
+.body_cadastro_usuario #total-cadastro {
+  width: 60%;
 }
 
 .body_cadastro_usuario .genero_linha {
-
-    text-align: center
+  text-align: center;
 }
 
 .body_cadastro_usuario .genero {
-    text-align: center
+  text-align: center;
 }
 
 .body_cadastro_usuario .telefone {
-    text-align: center;
-    
+  text-align: center;
 }
 
 .body_cadastro_usuario .selecione {
-    border-radius:  0 .25rem .25rem 0;
-
+  border-radius: 0 0.25rem 0.25rem 0;
 }
