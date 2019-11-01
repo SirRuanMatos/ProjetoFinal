@@ -7,6 +7,7 @@ import CadastroLogin from './paginas/CadastroLogin';
 import TelaEnsinar from './paginas/TelaEnsinar';
 import Logout from './utils/Logout';
 import Aprender from './paginas/TelaAprenderBusca';
+import AprenderDescricao from './paginas/TelaAprenderDescricao';
 
 import Navbar from "./componentes/Navbar";
 import Sidebar from './componentes/Sidebar';
@@ -25,9 +26,10 @@ ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route path="/" exact={true} component={Login} />
-            <Route path="/Cadastrar" component={CadastroLogin} />
-            <Route path="/Ensinar" render={() => (verificaAutenticacao() ? (<Layout componente={<TelaEnsinar />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
-            <Route path="/Aprender" render={() => (verificaAutenticacao() ? (<Layout componente={<Aprender />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
+            <Route path="/Cadastrar" exact={true} component={CadastroLogin} />
+            <Route path="/Ensinar" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<TelaEnsinar />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
+            <Route path="/Aprender" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<Aprender />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
+            <Route path="/Aprender/Curso/:idCurso" render={(props) => (verificaAutenticacao() ? (<Layout componente={<AprenderDescricao {...props} />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Logout" component={Logout} />
             <Route render={() => <h1>404 Error</h1>} />
         </Switch>
