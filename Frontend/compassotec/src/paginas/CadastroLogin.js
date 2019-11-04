@@ -5,7 +5,8 @@ import logo from '../imgs/compasso.png';
 class CadastroLogin extends Component {
     constructor(props) {
         super(props);
-        this.state = { msg: '', isActive: true, isActiveError: true };
+        this.state = { msg: '', isActive: true, isActiveError: true, corrigido: false };
+        this.mascara = this.mascara.bind(this);
     }
 
     envia(event) {
@@ -30,91 +31,183 @@ class CadastroLogin extends Component {
             })
         };
 
-        // altera rota
-        fetch('http://localhost:8080/login/cadastro', requestInfo)
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                } else {
-                    throw new Error('Não foi possí­vel realizar o cadastro');
-                }
-            })
-            .then(text => {
-                console.log(text);
-                this.email.value = '';
-                this.senha.value = '';
-                this.confirmarSenha.value = '';
-                this.tipoUsuario.value = '';
-                this.setState({ msg: 'Usuário criado com sucesso' });
-                this.setState({ isActive: !this.state.isActive });
-                setTimeout(() => {
+        // altera rota  FAZER IF SE TODOS RETORNAM TRUE FAZ ESSE FETCH ELSE FAZ O CATCH
+
+        if (this.verificaEmailSenha(), this.CampoEmBranco(), this.validadata()) {
+            fetch('http://localhost:8080/login/cadastro', requestInfo)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Não foi possí­vel realizar o cadastro');
+                    }
+                })
+                .then(text => {
+                    console.log(text);
+                    this.email.value = '';
+                    this.senha.value = '';
+                    this.confirmarSenha.value = '';
+                    this.tipoUsuario.value = '';
+                    this.setState({ msg: 'Usuário criado com sucesso' });
                     this.setState({ isActive: !this.state.isActive });
-                    this.props.history.push("/Cadastrar/Usuario");
-                }, 2000);
+                    setTimeout(() => {
+                        this.setState({ isActive: !this.state.isActive });
+                        this.props.history.push("/Cadastrar/Usuario");
+                    }, 2000);
 
 
 
-            })
-            .catch(error => {
-                this.setState({ msg: error.message });
-                this.setState({ isActiveError: !this.state.isActiveError });
-                setTimeout(() => {
+                })
+                .catch(error => {
+                    this.setState({ msg: error.message });
                     this.setState({ isActiveError: !this.state.isActiveError });
-                }, 2000);
-            });
+                    setTimeout(() => {
+                        this.setState({ isActiveError: !this.state.isActiveError });
+                    }, 2000);
+                });
+
+        } else {
+            this.setState({ msg: 'Campos invalidos' });
+            this.setState({ isActiveError: !this.state.isActiveError });
+            setTimeout(() => {
+                this.setState({ isActiveError: !this.state.isActiveError });
+            }, 2000);
+
+        }
+
     }
 
-    verifica() {
+
+
+
+    verificaEmailSenha() {
         let ehemail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email = document.querySelector('#email').value;
         let senha1 = document.querySelector('#senha').value.toUpperCase();
         let senha2 = document.querySelector('#confirmasenha').value.toUpperCase();
-        let tipo = document.querySelector('#tipo').value
-        let adm = document.querySelector('#adm')
-
-        console.log(tipo);
 
 
-        if (adm.checked) {
-            console.log('Solicitou para ser infernizado o tempo todo');
-        } else console.log('Não quer se incomodar');
+        if ((ehemail.test(email)) == false) {
+            console.log('Email invalido!');
+            return false
+        } else if (senha1.length < 8) {
+            console.log('Senha muito curta');
+            return false
+        } else if (senha2.length < 8) {
+            console.log('Confirmação de senha muito curta');
+            return false
+        } else if (senha1 != senha2) {
+            console.log('Senhas diferentes');
+            return false
+        } else return true
+    }
+
+    parenteses() {
+        let telefone = document.querySelector('#fone')
+        if (telefone.value.length == 0)
+            telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+    }
+
+    mascara() {
+
+        let telefone = document.querySelector('#fone')
+
+        if (telefone.value.length == 3)
+            telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+
+        if (telefone.value.length == 9)
+            telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
 
 
+        if (telefone.value.length == 15 && this.state.corrigido == false) {
+            this.setState({ corrigido: true });
 
-        if (ehemail.test(email)) {
-            console.log(true);
-        } else {
-            alert('Insira um email valido!');
-        }
+            var celular = telefone.value.split('');
+            console.log(celular);
 
 
-        if (senha1.length >= 8) {
-            if (senha1 === senha2) {
-                console.log(true);
-            } else {
-                alert('Senhas diferentes!');
-            }
-        } else {
-            alert('Digite uma senha com no minimo 8 caracteres')
+            let salva = celular[10]
+            celular[10] = '-'
+            celular[9] = salva
+            console.log(celular);
+
+            let celularstring = celular.join('');
+            console.log(celularstring + '  ' + typeof (celularstring));
+
+
+            telefone.value = celularstring
+
         }
     }
 
-    mascara(telefone){ 
-    
-        const isCelular = telefone.value.length === 9;
-    
-        if (isCelular){
-            if(telefone.value.length == 10)
-                telefone.value = telefone.value + '-';
-        }
-        
-        if(telefone.value.length == 0)
-            telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
-        if(telefone.value.length == 3)
-            telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
-    
-        if(telefone.value.length == 8)
-            telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+
+    CampoEmBranco() {
+        let nome = document.querySelector('#nome').value
+        let cidade = document.querySelector('#cidade').value
+        let genero = document.querySelector('#genero').value
+        let data = document.querySelector("#data_nasc").value;
+
+        if (nome.length == 0) {
+            console.log('Nome em branco!');
+            return false
+        } else if (cidade.length == 0) {
+            console.log('Cidade em branco');
+            return false
+        } else if (genero == 'Selecione...') {
+            console.log('Genero em branco');
+            return false
+        } else if (data == '') {
+            console.log('Data em branco');
+            return false
+        } else return true;
+
+    }
+
+
+    validadata() {
+        var data = document.querySelector("#data_nasc").value;
+        console.log(data);
+        var datadividida = data.split('-');
+        console.log(datadividida);
+
+
+
+        datadividida[1] = parseInt(datadividida[1]) - 1;
+        datadividida[1] = datadividida[1].toString();
+
+        console.log(datadividida[0] + ' ' + typeof (datadividida[0]));
+        console.log(datadividida[1] + ' ' + typeof (datadividida[1]));
+        console.log(datadividida[2] + ' ' + typeof (datadividida[2]));
+
+        // HOJE
+        var hoje = new Date();
+
+        console.log(hoje.getFullYear() + ' ' + typeof (hoje.getFullYear()));
+        console.log(hoje.getMonth() + ' ' + typeof (hoje.getMonth()));
+        console.log(hoje.getDate() + ' ' + typeof (hoje.getDate()));
+
+
+        if (datadividida[0] < hoje.getFullYear()) {
+            console.log('Ano Menor');
+            return false;
+        } else if (datadividida[0] == hoje.getFullYear()) {
+            console.log('Ano Igual');
+            if (datadividida[1] < hoje.getMonth()) {
+                console.log('Mes Menor');
+                return false;
+            } else if (datadividida[1] == hoje.getMonth()) {
+                console.log('Mes Igual');
+                if (datadividida[2] < hoje.getDate()) {
+                    console.log('Data menor');
+                    return false;
+                } else if (datadividida[2] == hoje.getDate()) {
+                    console.log('Data Igual');
+                }
+            }
+        } else return true;
+
+
+
 
     }
 
@@ -153,7 +246,7 @@ class CadastroLogin extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Tipo de Usuario:</label>
-                                    <select className="form-control" id="exampleFormControlSelect1" ref={(input) => this.tipoUsuario = input}>
+                                    <select className="form-control" id="tipo" ref={(input) => this.tipoUsuario = input}>
                                         <option>Aluno</option>
                                         <option>Professor</option>
                                     </select>
@@ -183,7 +276,7 @@ class CadastroLogin extends Component {
                                 <div className="form-group mb-3">
                                     <div className="input-group-prepend ">
                                         <label htmlFor="inputGroupSelect01">Você se considera:</label><br />
-                                        <select className="custom-select selecione" id="inputGroupSelect01" ref={(input) => this.genero = input}>
+                                        <select className="custom-select selecione" id="genero" ref={(input) => this.genero = input}>
                                             <option selected>Selecione...</option>
                                             <option value="Masculino">Masculino</option>
                                             <option value="Feminino">Feminino</option>
@@ -197,11 +290,12 @@ class CadastroLogin extends Component {
                                         <label id="basic-addon1">Qual o seu telefone?</label>
                                     </div>
                                     <input type="text" className="form-control telefone" placeholder="(  ) ----- ----" aria-label="Telefone"
-                                        aria-describedby="basic-addon1" id="fone" ref={(input) => this.telefone = input} />
+                                        aria-describedby="basic-addon1" id="fone" onKeyPress={this.parenteses} onKeyUp={this.mascara} ref={(input) => this.telefone = input} />
                                 </div>
                                 <div className="contaniner divbotao">
                                     <button type="submit" className="btn btn-primary btn">Enviar</button>
                                 </div>
+
 
                             </form>
                         </div>

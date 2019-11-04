@@ -90,27 +90,27 @@ class Aula extends Component {
       if (datadividida[0] < hoje.getFullYear()) {
         console.log('Ano Menor');
         return false;
-      } else if (datadividida[0] === hoje.getFullYear()) {
+      } else if (datadividida[0] == hoje.getFullYear()) {
         console.log('Ano Igual');
         if (datadividida[1] < hoje.getMonth()) {
           console.log('Mes Menor');
           return false;
-        } else if (datadividida[1] === hoje.getMonth()) {
+        } else if (datadividida[1] == hoje.getMonth()) {
           console.log('Mes Igual');
           if (datadividida[2] < hoje.getDate()) {
             console.log('Data menor');
             return false;
-          } else if (datadividida[2] === hoje.getDate()) {
+          } else if (datadividida[2] == hoje.getDate()) {
             console.log('Data Igual');
             if (horadividida[0] < hoje.getHours()) {
               console.log('Hora menor');
               return false;
-            } else if (horadividida[0] === hoje.getHours()) {
+            } else if (horadividida[0] == hoje.getHours()) {
               console.log('Hora Igual');
               if (horadividida[1] < hoje.getMinutes()) {
                 console.log('Minuto menor');
                 return false;
-              } else if (horadividida[1] === hoje.getMinutes()) {
+              } else if (horadividida[1] == hoje.getMinutes()) {
                 console.log('Minuto igual');
                 return false;
               }
