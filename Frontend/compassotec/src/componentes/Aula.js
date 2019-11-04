@@ -155,10 +155,12 @@ class Aula extends Component {
         <div className="form-group col-md 8">
           <div className="container">
             {aulas}
-            <span className="input-group-text adicionar" id="inputGroup-sizing-default">
-              <a onClick={this.handleAdcionarAulas}>Adicionar</a>
+            <span className="adicionar rounded-circle btn-lg btn-info" id="inputGroup-sizing-default" onClick={this.handleAdcionarAulas}>
+              <a >+</a>
             </span>
-            <button type="submit" onClick={this.envia} className="input-group-text remover" id="inputGroup-sizing-default">Enviar</button>
+            <div className="d-flex justify-content-end">
+              <button type="submit" onClick={this.envia} className="remover btn btn-success" id="inputGroup-sizing-default">Enviar</button>
+            </div>
           </div>
         </div>
 
