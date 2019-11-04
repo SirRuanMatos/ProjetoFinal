@@ -3,7 +3,7 @@
   margin-top: 3%;
   overflow: hidden;
 }
-.item-boxx {
+.body_telaAprender .item-boxx {
   margin-left: 10%;
   width: 5.5rem;
 }
@@ -23,15 +23,13 @@
   margin-bottom: 1%;
   margin-left: 2%;
 }
-.scroll {
 
-}
 .body_telaAprender .topicos {
   overflow: auto;
   float: left;
   margin-left: 2%;
-  margin-top: 4%;
-  width: 89%;
+  margin-top: 3%;
+  width: 94%;
   margin-bottom: 1rem;
   overflow: scroll;
   height: 298px;
@@ -39,22 +37,22 @@
   overflow-x:hidden;
 }
 
-.btn-primary {
+.body_telaAprender .btn-primary {
   color: #fff;
   background-color: #838485;
   border-color: #5a5c5e;
 }
-.buttons {
+.body_telaAprender .buttons {
   margin-right: 2%;
   margin-bottom: 2%;
   width: 40%;
   margin-top: 38rem;
   float: right;
 }
-.button {
+.body_telaAprender .button {
   margin-left: 7%;
   float: right;
 }
-.lista {
+.body_telaAprender .lista {
   width: 63rem;
 }
