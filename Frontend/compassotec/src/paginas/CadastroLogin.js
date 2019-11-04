@@ -49,7 +49,7 @@ class CadastroLogin extends Component {
                 this.setState({ isActive: !this.state.isActive });
                 setTimeout(() => {
                     this.setState({ isActive: !this.state.isActive });
-                    this.props.history.push("/Cadastrar/Usuario");
+                    this.props.history.push("/");
                 }, 2000);
 
 
@@ -99,23 +99,23 @@ class CadastroLogin extends Component {
         }
     }
 
-    mascara(telefone){ 
-    
+    mascara() {
+        var telefone = document.querySelector("#fone");
+
         const isCelular = telefone.value.length === 9;
-    
-        if (isCelular){
-            if(telefone.value.length == 10)
+
+        if (isCelular) {
+            if (telefone.value.length == 10)
                 telefone.value = telefone.value + '-';
         }
-        
-        if(telefone.value.length == 0)
-            telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
-        if(telefone.value.length == 3)
-            telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
-    
-        if(telefone.value.length == 8)
-            telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
 
+        if (telefone.value.length == 0)
+            telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+        if (telefone.value.length == 3)
+            telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+
+        if (telefone.value.length == 8)
+            telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
     }
 
 
@@ -197,7 +197,7 @@ class CadastroLogin extends Component {
                                         <label id="basic-addon1">Qual o seu telefone?</label>
                                     </div>
                                     <input type="text" className="form-control telefone" placeholder="(  ) ----- ----" aria-label="Telefone"
-                                        aria-describedby="basic-addon1" id="fone" ref={(input) => this.telefone = input} />
+                                        aria-describedby="basic-addon1" id="fone" ref={(input) => this.telefone = input} onKeyPress={this.mascara} />
                                 </div>
                                 <div className="contaniner divbotao">
                                     <button type="submit" className="btn btn-primary btn">Enviar</button>

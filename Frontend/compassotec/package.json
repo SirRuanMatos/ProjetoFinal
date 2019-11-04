@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "create-react-app": "^3.2.0",
+    "date-fns": "^2.6.0",
     "popper": "^1.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",

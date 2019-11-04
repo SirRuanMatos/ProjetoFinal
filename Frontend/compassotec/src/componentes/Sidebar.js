@@ -83,10 +83,10 @@ class Sidebar extends Component {
                         </LinkWrapper>
                     </li>
                     <li>
-                        <a href="#">
+                        <LinkWrapper to="/Turma">
                             <i className="fas fa-clipboard-list f-24" ></i>
                             <span className="list-unstyled CTAs f-20" >Turmas</span>
-                        </a>
+                        </LinkWrapper>
                     </li>
                     <li>
                         <a href="#">
