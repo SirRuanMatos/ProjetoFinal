@@ -17,10 +17,6 @@
   width: 100%;
 }
 
-.input-group-prepend {
-  display: block;
-}
-
 .body_CadastroLogin form {
   margin-top: 5%;
 }

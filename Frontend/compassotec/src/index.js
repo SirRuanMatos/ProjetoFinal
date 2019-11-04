@@ -9,6 +9,7 @@ import Logout from './utils/Logout';
 import Aprender from './paginas/TelaAprenderBusca';
 import AprenderDescricao from './paginas/TelaAprenderDescricao';
 import TelaPopularidade from './paginas/TelaPopularidade';
+import TelaTurma from './paginas/TelaTurma';
 
 import Navbar from "./componentes/Navbar";
 import Sidebar from './componentes/Sidebar';
@@ -31,6 +32,7 @@ ReactDOM.render(
             <Route path="/Popularidade" exact={true} component={TelaPopularidade} />
             <Route path="/Ensinar" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<TelaEnsinar />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Aprender" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<Aprender />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
+            <Route path="/Turma" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<TelaTurma />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Aprender/Curso/:idCurso" render={(props) => (verificaAutenticacao() ? (<Layout componente={<AprenderDescricao {...props} />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Logout" component={Logout} />
             <Route render={() => <h1>404 Error</h1>} />

@@ -35,40 +35,52 @@ class Ensinar extends Component {
 
             <div className="body_telaEnsinar" onBlurCapture={this.envia}>
                 <div className="wrapper">
-                    <div className="form container">
+                    <div className="form">
                         <div className="container">
-                            <div className="input-group mb-3 curso">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text" id="inputGroup-sizing-default">Nome do Curso</span>
-                                </div>
-                                <input type="text" className="form-control nome-curso" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Curso" ref={(input) => this.curso = input} />
-                            </div>
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="input-group mb-3 curso ">
 
-                            <div className="tecnologia">
-                                <div className="input-group mb-3 ">
-                                    <div className="input-group-prepend">
-                                        <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text">Nome do Curso</span>
+                                        </div>
+                                        <input type="text" className="form-control" placeholder="Curso" ref={(input) => this.curso = input} />
                                     </div>
-                                    <SelectTecnologia />
+
+
                                 </div>
                             </div>
 
-
-                            <div className="input-group alunos">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text">Alunos</span>
+                            <div className="row">
+                                <div className="tecnologia col-6">
+                                    <div className="input-group mb-3 ">
+                                        <div className="input-group-prepend">
+                                            <label className="input-group-text" htmlFor="inputGroupSelect01">Tecnologia</label>
+                                        </div>
+                                        <SelectTecnologia />
+                                    </div>
                                 </div>
-                                <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" ref={(input) => this.minAlunos = input} />
-                                <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" ref={(input) => this.maxAlunos = input} />
+
+
+                                <div className="input-group alunos col-6">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Alunos</span>
+                                    </div>
+                                    <input type="text" aria-label="First name" className="form-control" placeholder="Mínimo" ref={(input) => this.minAlunos = input} />
+                                    <input type="text" aria-label="Last name" className="form-control" placeholder="Máximo" ref={(input) => this.maxAlunos = input} />
+                                </div>
                             </div>
-                            <div className="input-group mt-3">
+                            <div className="row">
+                                <div className="input-group mt-3 mb-3">
+                                    <div className="col-6">
+                                        <textarea id="descricao" className="form-control" cols="70" rows="10" placeholder="Descrição do Curso" ref={(input) => this.descricao = input}></textarea>
+                                    </div>
+                                    <div className="col-6">
+                                        <textarea id="requisito" className="form-control" cols="50" rows="10" placeholder="Requisitos Mínimos" ref={(input) => this.prerequisito = input}></textarea>
+                                    </div>
 
 
-
-                            </div>
-                            <div className="input-group">
-                                <textarea id="descricao" className="form-control" cols="70" rows="10" placeholder="Descrição do Curso" ref={(input) => this.descricao = input}></textarea>
-                                <textarea id="requisito" className="form-control" cols="50" rows="10" placeholder="Requisitos Mínimos" ref={(input) => this.prerequisito = input}></textarea>
+                                </div>
                             </div>
                         </div>
 

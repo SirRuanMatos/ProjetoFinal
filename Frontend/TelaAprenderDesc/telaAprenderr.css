@@ -1,0 +1,57 @@
+.body_telaAprender .curso {
+  margin-top: 3%;
+  overflow: hidden;
+}
+.body_telaAprender .item-boxx {
+  margin-left: 10%;
+  width: 5.5rem;
+}
+
+.body_telaAprender.form-control {
+  height: 100%;
+}
+
+.body_telaAprender #requisito {
+  margin-top: 2%;
+  height: 37rem;
+}
+.body_telaAprender #descricao {
+  margin-top: 4%;
+  height: 17.5rem;
+  width: 89%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+.body_telaAprender .topicos {
+  overflow: auto;
+  float: left;
+  margin-left: 2%;
+  margin-top: 3%;
+  width: 94%;
+  margin-bottom: 1rem;
+  overflow: scroll;
+  height: 298px;
+ 
+  overflow-x:hidden;
+}
+
+.body_telaAprender .btn-primary {
+  color: #fff;
+  background-color: #838485;
+  border-color: #5a5c5e;
+}
+.body_telaAprender .buttons {
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 40%;
+  margin-top: 38rem;
+  float: right;
+}
+.body_telaAprender .button {
+  margin-left: 7%;
+  float: right;
+}
+.body_telaAprender .lista {
+  width: 63rem;
+}
