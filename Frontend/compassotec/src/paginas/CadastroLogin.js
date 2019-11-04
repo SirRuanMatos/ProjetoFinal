@@ -290,11 +290,8 @@ class CadastroLogin extends Component {
                                         <label id="basic-addon1">Qual o seu telefone?</label>
                                     </div>
                                     <input type="text" className="form-control telefone" placeholder="(  ) ----- ----" aria-label="Telefone"
-<<<<<<< HEAD
                                         aria-describedby="basic-addon1" id="fone" onKeyPress={this.parenteses} onKeyUp={this.mascara} ref={(input) => this.telefone = input} />
-=======
-                                        aria-describedby="basic-addon1" id="fone" ref={(input) => this.telefone = input} onKeyPress={this.mascara} />
->>>>>>> 7b926f3574b23b36b9d34bb75083b7afb677b1fa
+
                                 </div>
                                 <div className="contaniner divbotao">
                                     <button type="submit" className="btn btn-primary btn">Enviar</button>
