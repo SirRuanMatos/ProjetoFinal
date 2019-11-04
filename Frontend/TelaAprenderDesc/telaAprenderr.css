@@ -1,11 +1,10 @@
 
 .body_telaAprender .curso {
-  
   margin-top: 3%;
+  overflow: hidden;
 }
 .item-boxx {
-
- margin-left: 10%;
+  margin-left: 10%;
   width: 5.5rem;
 }
 
@@ -24,13 +23,20 @@
   margin-bottom: 1%;
   margin-left: 2%;
 }
+.scroll {
+
+}
 .body_telaAprender .topicos {
+  overflow: auto;
   float: left;
   margin-left: 2%;
   margin-top: 4%;
   width: 89%;
   margin-bottom: 1rem;
-
+  overflow: scroll;
+  height: 298px;
+ 
+  overflow-x:hidden;
 }
 
 .btn-primary {
@@ -43,11 +49,11 @@
   margin-bottom: 2%;
   width: 40%;
   margin-top: 38rem;
-  float: right; 
+  float: right;
 }
 .button {
   margin-left: 7%;
-  float: right; 
+  float: right;
 }
 .lista {
   width: 63rem;
