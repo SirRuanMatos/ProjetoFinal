@@ -66,10 +66,30 @@ module.exports = function (app) {
                 return;
             }
             else {
-                res.status(200).send("UsuÃ¡rio criado");
+                var idInserido = request.insertId;
+
+                loginDao.inserirInfoUsuarios(req.body, idInserido, (exception, request, response, retorno) => {
+                    if (exception) {
+                        console.log(exception);
+                        res.status(500).send(exception);
+                        return;
+                    }
+                    else {
+
+                        res.status(200).send("Usuário cadastrado");
+                    }
+                });
+
             }
 
         });
+    });
+
+    app.post('/login/cadastro/usuario', (req, res) => {
+        var connection = app.persistencia.conexaoBanco();
+        var loginDao = new app.persistencia.LoginDao(connection);
+
+
     });
 
     app.post('/login/infoMenu', verifyJWT, (req, res) => {
@@ -83,8 +103,6 @@ module.exports = function (app) {
                 return;
             }
             else {
-                console.log(request);
-
                 res.status(200).json(request);
             }
 

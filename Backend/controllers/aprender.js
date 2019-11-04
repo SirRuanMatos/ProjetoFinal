@@ -25,8 +25,6 @@ module.exports = function (app) {
             else {
                 var idTurma = request[0].idTurma;
                 jsonEnviar.push(request);
-                console.log(idTurma);
-
 
                 aprenderDao.pegarAulas(idTurma, (exception, request2, response, retorno) => {
                     if (exception) {

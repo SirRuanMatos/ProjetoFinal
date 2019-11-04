@@ -11,6 +11,16 @@
   height: 100vh;
 }
 
+#data_nasc {
+  margin-top: 0 !important;
+  background-color: #fff !important;
+  width: 100%;
+}
+
+.input-group-prepend {
+  display: block;
+}
+
 .body_CadastroLogin form {
   margin-top: 5%;
 }
