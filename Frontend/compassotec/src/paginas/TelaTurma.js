@@ -50,7 +50,7 @@ class TelaTurma extends Component {
                 parseISO(aula.data),
                 "dd'/'MM'/'yyyy"
             );
-            return (<tr id="linha">
+            return (<tr id="linha" key={"linha" + aula.codCurso}>
                 <td id="curso">
                     <LinkWrapper to={"/Aprender/Curso/" + aula.codCurso} className="list-group-item list-group-item-action ">{aula.topico}</LinkWrapper>
                 </td>

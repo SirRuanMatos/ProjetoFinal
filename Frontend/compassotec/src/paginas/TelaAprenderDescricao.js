@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/telaAprenderD.css'
+import '../css/telaAprenderr.css'
 
 class TelaAprenderDescricao extends Component {
     constructor(props) {
@@ -68,37 +68,48 @@ class TelaAprenderDescricao extends Component {
 
 
         return (
-            <div className="body_telaAprenderDescriscao">
-                <div className="container">
-                    <div className="batata">
-                        <div className="item-box">
-                            <div className="item-text">
-                                {this.state.cursoNome} - {this.state.tecnologia}
-                            </div>
-                            <div className="requisitos-box">
-                                <div className="requisitos">
-                                    <div className="requisitos-text">
+            <div class="body_telaAprender">
+                <div class="container curso">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend ">
+                            <span class="input-group-text item-boxx" id="inputGroup-sizing-default">Curso</span>
+                        </div>
+                        <li class="list-group-item lista">{this.state.cursoNome} - {this.state.tecnologia}</li>
+                    </div>
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div id="descricao" class="form-control">
                                         {this.state.preRequisito}
+                                        <h6>Minimo de alunos: {this.state.minAlunos}</h6> <h6>Máximo de alunos: {this.state.maxAlunos}</h6><h6>Status da turma: {this.state.statusTurma}</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" topicos">
+                                        <ul class="list-group">
+                                            {listaAulas}
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-8">
+                                <div id="requisito" class="form-control">
+                                    {this.state.descricao}
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-primary button">OK</button>
+                                        <button type="button" class="btn btn-primary button">VOLTAR</button>
                                     </div>
                                 </div>
 
-                                <ul className="list-group grupo-de-itens">
-                                    {listaAulas}
-                                </ul>
-                            </div>
-                            <div className="descricao">
-                                <div className="descricao-text">
-                                    {this.state.descricao} - Minimo de alunos: {this.state.minAlunos} - Máximo de alunos: {this.state.maxAlunos} - Status da turma: {this.state.statusTurma}
-                                </div>
-                            </div>
-                            <div className="buttons">
-                                <a className="waves-effect waves-light btn-large button">OK</a>
-                                <a className="waves-effect waves-light btn-large button">VOLTAR</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         );
     }
 }

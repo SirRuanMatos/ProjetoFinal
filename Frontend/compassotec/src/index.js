@@ -11,6 +11,8 @@ import AprenderDescricao from './paginas/TelaAprenderDescricao';
 import TelaPopularidade from './paginas/TelaPopularidade';
 import TelaTurma from './paginas/TelaTurma';
 
+import "./css/geral.css"
+
 import Navbar from "./componentes/Navbar";
 import Sidebar from './componentes/Sidebar';
 import Layout from "./componentes/Layout";
