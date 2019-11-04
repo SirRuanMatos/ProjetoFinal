@@ -50,15 +50,11 @@ class CadastroLogin extends Component {
                     this.tipoUsuario.value = '';
                     this.setState({ msg: 'Usuário criado com sucesso' });
                     this.setState({ isActive: !this.state.isActive });
-<<<<<<< HEAD
                     setTimeout(() => {
                         this.setState({ isActive: !this.state.isActive });
                         this.props.history.push("/Cadastrar/Usuario");
                     }, 2000);
-=======
-                    this.props.history.push("/");
-                }, 2000);
->>>>>>> 7b926f3574b23b36b9d34bb75083b7afb677b1fa
+
 
 
 
