@@ -59,4 +59,26 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/aprender/buscar/turmas/matricula', verifyJWT, (req, res) => {
+        var idAluno = req.userId;
+
+        var connection = app.persistencia.conexaoBanco();
+        var aprenderDao = new app.persistencia.AprenderDao(connection);
+
+        aprenderDao.buscarTurmasMatriculado(idAluno, (exception, request, response, retorno) => {
+            if (exception) {
+                console.log("entro");
+                console.log(exception);
+
+
+                res.status(500).send("Não foi possível listar as turmas matriculadas");
+                return;
+            }
+            else {
+                res.status(200).send(request);
+            }
+        });
+
+    });
+
 }
