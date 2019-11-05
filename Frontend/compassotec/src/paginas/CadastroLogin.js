@@ -187,18 +187,18 @@ class CadastroLogin extends Component {
         console.log(hoje.getDate() + ' ' + typeof (hoje.getDate()));
 
 
-        if (datadividida[0] < hoje.getFullYear()) {
-            console.log('Ano Menor');
+        if (datadividida[0] > hoje.getFullYear()) {
+            console.log('Ano Maior');
             return false;
         } else if (datadividida[0] == hoje.getFullYear()) {
             console.log('Ano Igual');
-            if (datadividida[1] < hoje.getMonth()) {
-                console.log('Mes Menor');
+            if (datadividida[1] > hoje.getMonth()) {
+                console.log('Mes Maior');
                 return false;
             } else if (datadividida[1] == hoje.getMonth()) {
                 console.log('Mes Igual');
-                if (datadividida[2] < hoje.getDate()) {
-                    console.log('Data menor');
+                if (datadividida[2] > hoje.getDate()) {
+                    console.log('Data Maior');
                     return false;
                 } else if (datadividida[2] == hoje.getDate()) {
                     console.log('Data Igual');
