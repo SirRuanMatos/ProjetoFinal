@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/telaTurma.css';
+//import '../css/telaTurma.css';
 import LinkWrapper from '../utils/LinkWrapper';
 import { parseISO, format } from "date-fns";
 
@@ -71,10 +71,10 @@ class TelaTurma extends Component {
 
             <div className="body_telaTurma">
                 <div className="container ">
-                    <div className="txt">
+                    <div className="txt text-center mt-3">
                         <h1>Curso Matriculados</h1>
                     </div>
-                    <table className="table table-bordered table-dark">
+                    <table className="table table-bordered table-light">
                         <thead>
                             <tr>
                                 <th className="w-50 p-3" scope="col">Curso</th>

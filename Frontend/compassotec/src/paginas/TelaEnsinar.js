@@ -58,7 +58,7 @@ class TelaEnsinar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.envia}>
+            <form onSubmit={this.envia} className="mt-3">
                 <span>{this.state.msg}</span>
                 <Ensinar setDadosEnsinar={this.setDadosEnsinar} />
                 <Aula setDadosAula={this.setDadosAulas} />

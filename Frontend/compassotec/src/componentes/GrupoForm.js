@@ -7,7 +7,7 @@ class GrupoForm extends Component {
         return (
             <div className="body_aula mt-3">
                 <div className="form-row row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6">
                         <div className="form-group">
                             <div className="input-group-prepend">
                                 <span className="input-group-text" id="inputGroup-sizing-default">Tópico</span>
@@ -15,7 +15,7 @@ class GrupoForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6">
                         <div className="form-group">
                             <div className="input-group-prepend">
                                 <span className="input-group-text" id="inputGroup-sizing-default">Local</span>
@@ -23,7 +23,7 @@ class GrupoForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6">
                         <div className="form-group">
                             <div className="input-group-prepend">
                                 <span className="input-group-text" id="inputGroup-sizing-default">Data</span>
@@ -31,7 +31,7 @@ class GrupoForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-4">
                         <div className="form-group">
                             <div className="input-group-prepend">
                                 <span className="input-group-text" id="inputGroup-sizing-default">Hora</span>
@@ -41,7 +41,7 @@ class GrupoForm extends Component {
                         </div>
 
                     </div>
-                    <div className="col-1">
+                    <div className="col-lg-1 col-md-2">
                         <div className="input-group-prepend d-flex justify-content-end">
                             <button type="button" className="remover rounded-circle btn btn-danger" id="inputGroup-sizing-default" onClick={this.props.clicou}>X</button>
                         </div>

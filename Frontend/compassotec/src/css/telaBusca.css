@@ -1,120 +1,116 @@
-.body_telaBusca {
-  background-image: linear-gradient(to right, #2564c2, #1773cd, #0982d7, #0791df, #179fe7);
-}
 /*label tecnologia*/
-.body_telaBusca .tecnologia{
-  border-radius: .25rem 0 0 .25rem ; ;
+.body_telaBusca .tecnologia {
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 
 /*input tecnologia*/
-.body_telaBusca .selecione-tecnologia{
-    border-radius: 0 .25rem .25rem 0;
+.body_telaBusca .selecione-tecnologia {
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 /*list*/
-.body_telaBusca .lista{
-    margin-top: 0.5%;
+.body_telaBusca .lista {
+  margin-top: 0.5%;
 }
 
 /*span nome e alunos*/
 
-.body_telaBusca .topico-nome{
-    font-size: 130%;
-    margin-top: 2%;
-    margin-left: 2%;
-    font-weight: 700;
-    display: inline-block;
+.body_telaBusca .topico-nome {
+  font-size: 130%;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-weight: 700;
+  display: inline-block;
 }
-.body_telaBusca .topico-alunos{
-    font-size: 130%;
-    margin-top: 2%;
-    margin-right: 8%;
-    font-weight: 700;
-    float: right;
+.body_telaBusca .topico-alunos {
+  font-size: 130%;
+  margin-top: 2%;
+  margin-right: 8%;
+  font-weight: 700;
+  float: right;
 }
 
 /*span minimo maximo matriculados*/
-.body_telaBusca .span-maximo{
+.body_telaBusca .span-maximo {
   float: right;
   margin-left: 0.5%;
 }
 
-.body_telaBusca .span-minimo{
+.body_telaBusca .span-minimo {
   float: right;
-  margin-left: 3%; 
+  margin-left: 3%;
 }
 
-.body_telaBusca .span-matriculados{
+.body_telaBusca .span-matriculados {
   float: right;
 }
 
 /*span demosntrativo de quantidade de cada curso*/
-.body_telaBusca .span-lista-maximo{
+.body_telaBusca .span-lista-maximo {
   float: right;
   margin-left: 0.5%;
 }
 
-.body_telaBusca .span-lista-minimo{
+.body_telaBusca .span-lista-minimo {
   float: right;
-  margin-left: 1%; 
+  margin-left: 1%;
 }
 
-.body_telaBusca .span-lista-matriculados{
+.body_telaBusca .span-lista-matriculados {
   float: right;
 }
-
 
 /********Animação*********/
 .body_telaBusca .formContent {
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background: #fff;
-    padding: 3%;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  }
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 3%;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
 
 .body_telaBusca .fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
-  
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 .body_telaBusca .wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 10%;
 }

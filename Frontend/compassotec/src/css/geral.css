@@ -4,5 +4,5 @@ body,
 #sidebar,
 .wrapper,
 .body_Principal2 {
-  height: 100%;
+  height: auto;
 }
