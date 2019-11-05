@@ -2,10 +2,6 @@
   margin-top: 3%;
   overflow: hidden;
 }
-.body_telaAprender .item-boxx {
-  margin-left: 10%;
-  width: 5.5rem;
-}
 
 .body_telaAprender.form-control {
   height: 100%;
@@ -32,8 +28,8 @@
   margin-bottom: 1rem;
   overflow: scroll;
   height: 298px;
- 
-  overflow-x:hidden;
+
+  overflow-x: hidden;
 }
 
 .body_telaAprender .btn-primary {
@@ -53,5 +49,9 @@
   float: right;
 }
 .body_telaAprender .lista {
-  width: 63rem;
+  width: 100%;
+}
+
+.body_telaAprender .input-group-prepend {
+  width: 100%;
 }

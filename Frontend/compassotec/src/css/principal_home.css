@@ -108,6 +108,10 @@ span {
   display: none;
 }
 
+.body_Principal2 input {
+  overflow: hidden;
+}
+
 .body_Principal2 #sidebar.active .sidebar-header strong {
   display: block;
 }

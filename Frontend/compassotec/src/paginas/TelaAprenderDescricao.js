@@ -68,26 +68,26 @@ class TelaAprenderDescricao extends Component {
 
 
         return (
-            <div class="body_telaAprender">
-                <div class="container curso">
-                    <div class="input-group mb-3 ">
-                        <div class="input-group-prepend ">
-                            <span class="input-group-text item-boxx" id="inputGroup-sizing-default">Curso</span>
+            <div className="body_telaAprender">
+                <div className="container curso">
+                    <div className="input-group mb-3 ">
+                        <div className="input-group-prepend ">
+                            <span className="input-group-text item-boxx" id="inputGroup-sizing-default">Curso</span>
+                            <li className="list-group-item lista flex-grow-1 bd-highlight">{this.state.cursoNome} - {this.state.tecnologia}</li>
                         </div>
-                        <li class="list-group-item lista">{this.state.cursoNome} - {this.state.tecnologia}</li>
                     </div>
-                    <div class="container ">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="row">
-                                    <div id="descricao" class="form-control">
+                    <div className="container ">
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="row">
+                                    <div id="descricao" className="form-control">
                                         {this.state.preRequisito}
                                         <h6>Minimo de alunos: {this.state.minAlunos}</h6> <h6>Máximo de alunos: {this.state.maxAlunos}</h6><h6>Status da turma: {this.state.statusTurma}</h6>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class=" topicos">
-                                        <ul class="list-group">
+                                <div className="row">
+                                    <div className=" topicos">
+                                        <ul className="list-group">
                                             {listaAulas}
 
                                         </ul>
@@ -95,12 +95,12 @@ class TelaAprenderDescricao extends Component {
                                 </div>
                             </div>
 
-                            <div class="col-8">
-                                <div id="requisito" class="form-control">
+                            <div className="col-8">
+                                <div id="requisito" className="form-control">
                                     {this.state.descricao}
-                                    <div class="buttons">
-                                        <button type="button" class="btn btn-primary button">OK</button>
-                                        <button type="button" class="btn btn-primary button">VOLTAR</button>
+                                    <div className="buttons">
+                                        <button type="button" className="btn btn-primary button">OK</button>
+                                        <button type="button" className="btn btn-primary button">VOLTAR</button>
                                     </div>
                                 </div>
 

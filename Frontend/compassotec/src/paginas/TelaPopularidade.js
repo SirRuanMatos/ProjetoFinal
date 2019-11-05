@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../css/reset.css'
 import '../css/barrasEstilo.css'
 
 class TelaPopularidade extends Component {
