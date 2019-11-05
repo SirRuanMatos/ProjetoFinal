@@ -52,7 +52,7 @@ class CadastroLogin extends Component {
                     this.setState({ isActive: !this.state.isActive });
                     setTimeout(() => {
                         this.setState({ isActive: !this.state.isActive });
-                        this.props.history.push("/Cadastrar/Usuario");
+                        this.props.history.push("/");
                     }, 2000);
 
 
@@ -214,7 +214,7 @@ class CadastroLogin extends Component {
     render() {
         return (
             <div className="body_CadastroLogin">
-                <div className="wrapper">
+                <div className="wrapper pb-3 pt-3">
                     <div className="fadeInDown formContent container">
                         <div className="fadeIn first">
                             <img src={logo} id="icon" alt="User Icon" />

@@ -98,12 +98,12 @@ class TelaAprenderDescricao extends Component {
                             <div className="col-8">
                                 <div id="requisito" className="form-control">
                                     {this.state.descricao}
-                                    <div className="buttons">
+                                    
+                                </div>
+                                <div className="buttons">
                                         <button type="button" className="btn btn-primary button">OK</button>
                                         <button type="button" className="btn btn-primary button">VOLTAR</button>
                                     </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
