@@ -1,6 +1,7 @@
 .body_telaConfiguracao {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 
 .body_telaConfiguracao #data_nasc {
@@ -50,8 +51,8 @@
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
@@ -63,8 +64,9 @@
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    overflow: hidden;
   }
   100% {
     opacity: 1;
