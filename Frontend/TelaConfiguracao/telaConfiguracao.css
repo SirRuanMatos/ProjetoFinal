@@ -1,0 +1,84 @@
+.body_telaConfiguracao {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.body_telaConfiguracao #data_nasc {
+  margin-top: 0 !important;
+  background-color: #fff !important;
+ 
+}
+
+.body_telaConfiguracao form {
+  margin-top: 3%;
+}
+
+.body_telaConfiguracao h2 {
+  font-size: 1.5em;
+  text-align: left;
+  margin-top: 2%;
+  font-weight: 700;
+}
+.body_telaConfiguracao .btn {
+  width: 10em;
+  margin-top: 6%;
+  margin-left: 35%;
+}
+
+.body_telaConfiguracao .formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  
+  /*position: relative;*/
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
+
+.body_telaConfiguracao .fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.body_telaConfiguracao .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+}
+

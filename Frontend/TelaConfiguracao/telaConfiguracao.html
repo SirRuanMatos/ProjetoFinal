@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="telaConfiguracao.css">
+    <title>Configuração</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="body_telaConfiguracao">
+            <div class="wrapper">
+                <div class="fadeInDown formContent container">
+                    <div class="fadeIn first">
+
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <label class="d-none alert alert-success"></label>
+                        <label class="d-none alert alert-danger"></label>
+                    </div>
+
+                    <div class="form container">
+                        <h2>Editar cadastro de Usuario:</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail">Endereço de email</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                            placeholder="Seu email">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Senha</label><br>
+                                        <input type="password" class="form-control" id="senha" placeholder="Senha">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirme sua Senha</label>
+                                        <input type="password" class="form-control" id="confirmasenha"
+                                            placeholder="Senha">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Tipo de Usuario:</label>
+                                        <select class="form-control" id="tipo">
+                                            <option>Aluno</option>
+                                            <option>Professor</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="input-group-prepend telefone_linha">
+                                            <label id="basic-addon1">Qual o seu telefone?</label></div><input
+                                            type="text" class="form-control telefone" placeholder="(  ) ----- ----"
+                                            aria-label="Telefone" aria-describedby="basic-addon1" id="fone">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label id="basic-addon1">Qual é o seu nome?</label>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Seu nome aqui"
+                                            aria-label="Usuário" aria-describedby="basic-addon1" id="nome">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group-prepend cidade">
+                                            <label id="basic-addon1">Qual a sua cidade?</label>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Sua cidade aqui"
+                                            aria-label="Cidade" aria-describedby="basic-addon1" id="cidade">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label id="basic-addon1">Quando você nasceu?</label>
+                                        </div>
+                                        <input type="date" class="form-control" id="data_nasc">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <div class="input-group-prepend ">
+                                            <label for="inputGroupSelect01">Você se considera:</label><br>
+                                        </div>
+                                        <select class="custom-select selecione" id="genero">
+                                            <option>Selecione...</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Feminino">Feminino</option>
+                                            <option value="Outro">Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="content">                                  
+                                    <button type="submit" class="btn btn-primary btn">Enviar</button>
+                                    </div>   
+                                </div>
+                            </div>
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
