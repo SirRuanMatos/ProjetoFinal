@@ -31,7 +31,7 @@ ReactDOM.render(
         <Switch>
             <Route path="/" exact={true} component={Login} />
             <Route path="/Cadastrar" exact={true} component={CadastroLogin} />
-            <Route path="/Popularidade" exact={true} component={TelaPopularidade} />
+            <Route path="/Popularidade" exact={true}  render={() => (verificaAutenticacao() ? (<Layout componente={<TelaPopularidade />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Ensinar" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<TelaEnsinar />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Aprender" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<Aprender />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />
             <Route path="/Turma" exact={true} render={() => (verificaAutenticacao() ? (<Layout componente={<TelaTurma />} Navbar={<Navbar />} Sidebar={<Sidebar />} />) : (<Redirect to="/?msg=Você precisa estar logado para acessar!" />))} />

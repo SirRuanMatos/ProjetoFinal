@@ -94,7 +94,7 @@ class TelaAprenderBusca extends Component {
             < div className="body_telaBusca" >
                 <div className="wrapper">
                     <div className="content container">
-                        <div className="fadeInDown formContent col-12">
+                        <div className="fadeInUp formContent col-12">
 
                             <div className="form container">
                                 <div className="input-group-prepend">

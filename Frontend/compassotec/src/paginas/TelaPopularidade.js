@@ -41,16 +41,15 @@ class TelaPopularidade extends Component {
 
         // aqui é codigo do lucas
 
-        window.onload = function () {
-
-            animateprogress("#html5", 85);
-            animateprogress("#php", 72);
-            animateprogress("#css", 86);
-            animateprogress("#python", 52);
-            animateprogress("#javascript", 79);
-            animateprogress("#nodejs", 36);
-
-        }
+        window.onload = setTimeout(function(){
+                //deferred onload
+                animateprogress("#html5", 85);
+                animateprogress("#php", 72);
+                animateprogress("#css", 86);
+                animateprogress("#python", 52);
+                animateprogress("#javascript", 79);
+                animateprogress("#nodejs", 36);
+              }, 100);
 
 
         function animateprogress(id, val) {
@@ -74,7 +73,7 @@ class TelaPopularidade extends Component {
 
                 if (i <= val) {
                     document.querySelector(id).setAttribute("value", i);      /* <----  Aumenta o valor da barra de progresso */
-                    document.querySelector(id + "+ span").innerHTML = i + "%";     /* <---- Aumenta a porcentagem e mostro na tag span */
+                    //document.querySelector(id + "+ span").innerHTML = i + "%";     /* <---- Aumenta a porcentagem e mostro na tag span */
                     i++;
                     fpAnimationFrame(animacion);      /* <----- Enquanto o contador não atinge a porcentagem definida, a função é chamada novamente com fpAnimationFrame   */
                 }
@@ -90,52 +89,54 @@ class TelaPopularidade extends Component {
 
     render() {
         return (
-            <div className='body_TelaPopularidade'>
-                <div className="wrapper">
-                    <div className="fadeInDown formContent">
-                        <div className="fadeIn first">
-                            <h1 className="titulo">Popularidade</h1>
-                        </div>
+            <div className='conteudo'>
 
-                        <div className="center container">
-                            <div>
-                                <p>HTML5</p>
-                                <progress id="html5" max="100" value="91"></progress>
-                                <span></span>
+                <div className='body_TelaPopularidade'>
+                    <div className="wrapper">
+                        <div className="fadeInUp formContent container">
+                            <div className="fadeIn first">
+                                <h1 className="titulo">Popularidade</h1>
                             </div>
 
-                            <div>
-                                <p>PHP</p>
-                                <progress id="php" max="100" value="72"></progress>
-                                <span></span>
-                            </div>
-                            <div>
-                                <p>CSS</p>
-                                <progress id="css" max="100" value="86"></progress>
-                                <span></span>
-                            </div>
+                            <div className="container">
+                                <div>
+                                    <p>HTML5</p>
+                                    <progress id="html5" max="100" value="91"></progress>
+                                    <span></span>
+                                </div>
 
-                            <div>
-                                <p>Python</p>
-                                <progress id="python" max="100" value="52"></progress>
-                                <span></span>
-                            </div>
-                            <div className="clear"></div>
+                                <div>
+                                    <p>PHP</p>
+                                    <progress id="php" max="100" value="72"></progress>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <p>CSS</p>
+                                    <progress id="css" max="100" value="86"></progress>
+                                    <span></span>
+                                </div>
 
-                            <div>
-                                <p>Javascript</p>
-                                <progress id="javascript" max="100" value="79"></progress>
-                                <span></span>
-                            </div>
+                                <div>
+                                    <p>Python</p>
+                                    <progress id="python" max="100" value="52"></progress>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <p>Javascript</p>
+                                    <progress id="javascript" max="100" value="79"></progress>
+                                    <span></span>
+                                </div>
 
-                            <div>
-                                <p>Node.js</p>
-                                <progress id="nodejs" max="100" value="36"></progress>
-                                <span></span>
+                                <div>
+                                    <p>Node.js</p>
+                                    <progress id="nodejs" max="100" value="36"></progress>
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         )

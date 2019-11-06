@@ -70,20 +70,20 @@
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
 }
 
-.body_telaBusca .fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+.body_telaBusca .fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
@@ -92,11 +92,11 @@
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;

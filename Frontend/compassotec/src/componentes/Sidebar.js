@@ -64,10 +64,10 @@ class Sidebar extends Component {
 
                 <ul className="list-unstyled components">
                     <li>
-                        <a href="#homeSubmenu">
+                        <LinkWrapper to="/Popularidade">
                             <i className="fas fa-home f-24" ></i>
                             <span className="list-unstyled CTAs f-20" >Home</span>
-                        </a>
+                        </LinkWrapper>
                     </li>
 
                     <li>

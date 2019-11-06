@@ -219,10 +219,6 @@ class CadastroLogin extends Component {
                         <div className="fadeIn first">
                             <img src={logo} id="icon" alt="User Icon" />
                         </div>
-                        <div className="d-flex justify-content-center">
-                            <label className={(this.state.isActive) ? 'd-none alert alert-success' : 'block fadeIn alert alert-success fadeInDown'}>{this.state.msg}</label>
-                            <label className={(this.state.isActiveError) ? 'd-none alert alert-danger' : 'block fadeIn alert alert-danger fadeInDown'}>{this.state.msg}</label>
-                        </div>
                         <div className="form container">
                             <h2>Cadastro de Usuario:</h2>
                             <form onSubmit={this.envia.bind(this)}>
@@ -289,9 +285,16 @@ class CadastroLogin extends Component {
                                         aria-describedby="basic-addon1" id="fone" onKeyPress={this.parenteses} onKeyUp={this.mascara} ref={(input) => this.telefone = input} />
 
                                 </div>
+                                
+                                <div className="d-flex justify-content-center">
+                                    <label className={(this.state.isActive) ? 'd-none alert alert-success' : 'block fadeIn alert alert-success fadeInDown'}>{this.state.msg}</label>
+                                    <label className={(this.state.isActiveError) ? 'd-none alert alert-danger' : 'block fadeIn alert alert-danger fadeInDown'}>{this.state.msg}</label>
+                                </div>
+
                                 <div className="contaniner divbotao">
                                     <button type="submit" className="btn btn-primary btn">Enviar</button>
                                 </div>
+
 
 
                             </form>

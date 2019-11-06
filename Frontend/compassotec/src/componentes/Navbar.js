@@ -5,13 +5,18 @@ import logo from '../imgs/logo.brhancah.png';
 
 class Navbar extends Component {
     state = {}
+
+    hideMenu() {
+        document.querySelector("#sidebar").classList.toggle('active');
+    }
+
     render() {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
 
-                        <div id="imgcompasso">
+                        <div id="imgcompasso" onClick={this.hideMenu}>
                             <img src={logo} alt="Logo Compasso" width="170" height="57" />
                         </div>
 
